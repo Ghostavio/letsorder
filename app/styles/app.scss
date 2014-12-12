@@ -17,6 +17,7 @@ $facebook-bg: $blue;
 
 /* FONTS */
 $font-header: 'Ubuntu', sans-serif;
+$font-body: 'Lato', sans-serif;
 
 html {
   // http://gregrickaby.com/using-the-golden-ratio-and-rems/
@@ -24,11 +25,17 @@ html {
 }
 
 body {
+  font-family: $font-body;
+  font-size: 18px;
   margin: 0;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: $font-header;
+  font-family: $font-body;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 .liquid-container {
@@ -132,6 +139,33 @@ li.no-style {
 
 .group-name {
   position: relative;
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: $font-header;
+  word-break: break-all;
 }
+
+/* RESTAURANT */
+.restaurant {
+  text-align: center;
+  background: $white;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.restaurant-logo {
+  width: 100%;
+}
+
+.restaurant-name {
+  position: relative;
+  font-size: 1.5em;
+  font-family: $font-header;
+  word-break: break-all;
+}
+
+/* FRIENDS */
+ul.friends-list {
+  padding-left: 0;
+}
+

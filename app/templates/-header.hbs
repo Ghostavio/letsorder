@@ -10,3 +10,16 @@
     {{outlet header}}
   </div>
 </nav>
+<nav class="navbar navbar-default navbar-fixed-top visible-sm visible-xs">
+  <div class="container">
+      {{#link-to 'index' classNames='navbar-brand'}}
+        {{ fa-icon "chevron-left" }}
+      {{/link-to}}
+      <div class="pull-right">
+        {{#link-to 'index' classNames='navbar-brand'}}
+          {{ fa-icon "bars" }}
+        {{/link-to}}
+      </div>
+  </div>
+</nav>
+
