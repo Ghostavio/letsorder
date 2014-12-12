@@ -1,5 +1,1 @@
-{{#if session.isAuthenticated}}
-  <button {{ action 'invalidateSession' }} class="btn btn-full btn-danger">Logout</button>
-{{else}}
-    <a {{ action 'authenticateWithFacebook' }} class="alert-link btn btn-lg btn-facebook">{{ fa-icon "facebook-square" }}  Login with Facebook </a>
-{{/if}}
+<a {{ action 'authenticateWithFacebook' }} class="alert-link btn btn-lg btn-facebook">{{ fa-icon "facebook-square" }}  Login with Facebook </a>
