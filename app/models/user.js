@@ -5,6 +5,6 @@ export default DS.Model.extend({
   email    : DS.attr('string'),
   username : DS.attr('string'),
   friends  : DS.hasMany("user",     { async: true }),
-  groups   : DS.hasMany("group",    { async: true }),
-  favItems : DS.hasMany("menuItem", { async: true })
+  favItems : DS.hasMany("menuItem", { inverse: 'favUsers' }),
+  groups   : DS.hasMany("group",    { inverse: 'members' })
 });
