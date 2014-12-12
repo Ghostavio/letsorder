@@ -1,48 +1,22 @@
 <div class="row">
   <div class="col-md-12">
-    <a class="btn btn-lg btn-success">Create group</a>
+    {{#link-to 'group/new' classNames='btn btn-lg btn-success'}}
+      Create group
+    {{/link-to}}
   </div>
 </div>
 
 <br>
 
 <div class="row">
+  {{#each group in content.groups }}
   <div class="col-md-2 col-sm-3 col-xs-6 group">
-    {{#link-to 'index' classNames='group-name'}}
+    {{#link-to 'group/restaurants' group classNames='group-name'}}
       <img src="/assets/images/a.svg" class="group-logo img-circle">
-      Group
+      {{ group.name }}
     {{/link-to}}
   </div>
-  <div class="col-md-2 col-sm-3 col-xs-6 group">
-    {{#link-to 'index' classNames='group-name'}}
-      <img src="/assets/images/a.svg" class="group-logo img-circle">
-      Group
-    {{/link-to}}
-  </div>
-  <div class="col-md-2 col-sm-3 col-xs-6 group">
-    {{#link-to 'index' classNames='group-name'}}
-      <img src="/assets/images/a.svg" class="group-logo img-circle">
-      Group
-    {{/link-to}}
-  </div>
-  <div class="col-md-2 col-sm-3 col-xs-6 group">
-    {{#link-to 'index' classNames='group-name'}}
-      <img src="/assets/images/a.svg" class="group-logo img-circle">
-      Group
-    {{/link-to}}
-  </div>
-  <div class="col-md-2 col-sm-3 col-xs-6 group">
-    {{#link-to 'index' classNames='group-name'}}
-      <img src="/assets/images/a.svg" class="group-logo img-circle">
-      Group
-    {{/link-to}}
-  </div>
-  <div class="col-md-2 col-sm-3 col-xs-6 group">
-    {{#link-to 'index' classNames='group-name'}}
-      <img src="/assets/images/a.svg" class="group-logo img-circle">
-      Group
-    {{/link-to}}
-  </div>
+  {{/each}}
 </div>
 
 <h2>Group suggestions</h2>

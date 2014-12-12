@@ -8,6 +8,8 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('login');
   this.route('group');
+  this.route('group/new');
+  this.route('group/restaurants', { path: 'group/:id' });
 });
 
 Router.reopen({
