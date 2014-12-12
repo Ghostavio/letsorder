@@ -123,9 +123,10 @@ li.no-style {
 }
 
 .navbar-brand {
+  color: $dark!important;
   font-size: 22px;
   font-weight: bold;
-  font-family: $font-header;
+  font-family: $font-body;
 }
 
 /* GROUP */
@@ -144,7 +145,7 @@ li.no-style {
 a.group-name {
   position: relative;
   font-size: 1em;
-  font-family: $font-header;
+  font-family: $font-body;
   word-break: break-all;
   &:hover, a:focus {
     text-decoration: none;
@@ -167,7 +168,7 @@ a.group-name {
 a.restaurant-name {
   position: relative;
   font-size: 1em;
-  font-family: $font-header;
+  font-family: $font-body;
   word-break: break-all;
   &:hover, a:focus {
     text-decoration: none;
