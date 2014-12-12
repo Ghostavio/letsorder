@@ -1,3 +1,4 @@
+@import "bootstrap";
 * {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-tap-highlight-color: transparent;
@@ -17,6 +18,17 @@ html {
 
 body {
   margin: 0;
+}
+
+.liquid-container {
+  margin-top: 70px;
+}
+
+.alert-link {
+  margin: 0 auto;
+  display: block;
+  width: 200px;
+  text-align: center;
 }
 
 .modal {

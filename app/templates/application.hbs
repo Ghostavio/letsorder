@@ -1,5 +1,7 @@
-<h1>Welcome to ember-cli-cordova!</h1>
-
-{{liquid-outlet name="main"}}
-
+{{#unless "controller.dontShowHeader"}}
+  {{partial "header"}}
+{{/unless}}
+<main class="main">
+  {{liquid-outlet name="main"}}
+</main>
 {{liquid-outlet modal}}
