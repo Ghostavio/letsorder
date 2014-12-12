@@ -4,7 +4,8 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp({
   'ember-cli-bootstrap-sass': {
-    'components': ['bs-popover', 'bs-nav']
+    'importBootstrapJS': true
+    // 'components': ['bs-popover', 'bs-nav'] // not sure if this is really necessary
   }
 });
 
