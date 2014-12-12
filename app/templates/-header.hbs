@@ -1,8 +1,10 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="navbar-header">
-    {{#link-to 'index' classNames='navbar-brand'}}
-      Home
-    {{/link-to}}
+  <div class="container">
+    <div class="navbar-header">
+      {{#link-to 'index' classNames='navbar-brand'}}
+        {{ fa-icon "coffee" }}  let's order
+      {{/link-to}}
+    </div>
   </div>
   <div class="navbar-collapse navbar-ex5-collapse">
     {{outlet header}}

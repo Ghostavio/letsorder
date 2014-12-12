@@ -1,4 +1,4 @@
-@import "bootstrap";
+@import "bootstrap", "colors";
 * {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-tap-highlight-color: transparent;
@@ -11,6 +11,13 @@
   }
 }
 
+/* COLORS */
+$navbar-bg: $white;
+$facebook-bg: $blue;
+
+/* FONTS */
+$font-header: 'Ubuntu', sans-serif;
+
 html {
   // http://gregrickaby.com/using-the-golden-ratio-and-rems/
   font-size: 62.5%;
@@ -20,6 +27,10 @@ body {
   margin: 0;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: $font-header;
+}
+
 .liquid-container {
   margin-top: 70px;
 }
@@ -27,7 +38,7 @@ body {
 .alert-link {
   margin: 0 auto;
   display: block;
-  width: 200px;
+  width: 220px;
   text-align: center;
 }
 
@@ -51,4 +62,61 @@ body {
   top: 0;
   left: 0;
   background: rgba(0,0,0,0.8);
+}
+
+/* BUTTONS */
+.btn-facebook {
+  background: $facebook-bg;
+  color: $white;
+  border: none;
+  &:hover{
+    color: $white;
+  }
+}
+
+.btn-success {
+  background: $green;
+  border: none;
+  &:hover {
+    background-color: darken($green, 3%);
+  }
+}
+
+.fa-coffee {
+  font-size: 26px;
+  color: $yellow;
+}
+
+
+/* NAVBAR */
+.navbar {
+  background: $navbar-bg;
+}
+
+.navbar-brand {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: $font-header;
+}
+
+/* GROUP */
+.group {
+  text-align: center;
+  margin: 10px;
+  height: 200px;
+  background: $white;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.group-logo {
+  width: 100%;
+}
+
+.group-name {
+  position: relative;
+  margin-top: 0.5vw;
+  font-size: 2em;
+  font-family: $font-header;
 }
