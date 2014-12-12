@@ -90,6 +90,10 @@ li.no-style {
 }
 
 /* BUTTONS */
+.btn {
+  border-radius: 4px;
+}
+
 .btn-facebook {
   background: $facebook-bg;
   color: $white;
@@ -137,11 +141,14 @@ li.no-style {
   width: 100%;
 }
 
-.group-name {
+a.group-name {
   position: relative;
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: $font-header;
   word-break: break-all;
+  &:hover, a:focus {
+    text-decoration: none;
+  }
 }
 
 /* RESTAURANT */
@@ -157,11 +164,14 @@ li.no-style {
   width: 100%;
 }
 
-.restaurant-name {
+a.restaurant-name {
   position: relative;
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: $font-header;
   word-break: break-all;
+  &:hover, a:focus {
+    text-decoration: none;
+  }
 }
 
 /* FRIENDS */

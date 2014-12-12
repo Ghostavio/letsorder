@@ -13,7 +13,7 @@
   <div class="col-md-2 col-sm-3 col-xs-6 group">
     {{#link-to 'group/restaurants' group classNames='group-name capitalize'}}
       <img src="/assets/images/a.svg" class="group-logo img-circle">
-      {{ group.name }}
+      {{#if group.name.length }} {{group.name}} {{else}} Untitled {{/if}}
     {{/link-to}}
   </div>
   {{ else }}
