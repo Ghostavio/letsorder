@@ -1,4 +1,12 @@
 <form {{action "createRoom" on="submit"}}>
-  {{ input name='name' classNames='form-control' value=name placeholder='Name of the group' }}
-  <button class="btn btn-default" type="submit">Create Group</button>
+  {{ input name="name" value=name placeholder="Name of the group" }}
+  <p>Invite Friends</p>
+  <ul class="friends-list">
+    {{#each content.friends}}
+      {{#view 'friend-select' friendBinding="this"}}
+        {{ name }}
+      {{/view}}
+    {{/each}}
+  </ul>
+  <button type="submit">Create Group</button>
 </form>
