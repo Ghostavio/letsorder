@@ -1,14 +1,34 @@
 <nav class="navbar navbar-default navbar-fixed-top hidden-sm hidden-xs">
   <div class="container">
-    <div class="row">
-    <div class="col-md-12">
-      <div class="navbar-header">
-        {{#link-to 'index' classNames='navbar-brand'}}
-          <img src="/assets/images/logo.svg" class="logo">
-          let's order
-        {{/link-to}}
-      </div>
-      </div>
+    <div class="navbar-header">
+      {{#link-to 'index' classNames='navbar-brand'}}
+      <img src="/assets/images/logo.svg" class="logo">
+      let's order
+      {{/link-to}}
+    </div>
+    <div class="pull-right">
+    </div>
+    <div class="dropdown pull-right navbar-brand">
+      <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+        {{ fa-icon "bars" }}
+      </a>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li>
+          {{#link-to '' classNames=''}}
+            Invite
+          {{/link-to}}
+          </li>
+          <li>
+          {{#link-to '' classNames=''}}
+            Settings
+          {{/link-to}}
+          </li>
+          <li>
+          {{#link-to '' classNames=''}}
+            Log out
+          {{/link-to}}
+          </li>
+      </ul>
     </div>
   </div>
   <div class="navbar-collapse navbar-ex5-collapse">
@@ -21,9 +41,29 @@
         {{ fa-icon "chevron-left" }}
       {{/link-to}}
       <div class="pull-right">
-        {{#link-to 'index' classNames='navbar-brand'}}
+      </div>
+      <div class="dropdown pull-right navbar-brand">
+        <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
           {{ fa-icon "bars" }}
-        {{/link-to}}
+        </a>
+
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li>
+          {{#link-to '' classNames=''}}
+            Invite
+          {{/link-to}}
+          </li>
+          <li>
+          {{#link-to '' classNames=''}}
+            Settings
+          {{/link-to}}
+          </li>
+          <li>
+          {{#link-to '' classNames=''}}
+            Log out
+          {{/link-to}}
+          </li>
+        </ul>
       </div>
   </div>
 </nav>

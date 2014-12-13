@@ -9,15 +9,17 @@
 <br>
 
 <div class="row">
-  {{#each group in content.groups }}
-  <div class="col-md-2 col-sm-3 col-xs-6 group">
-    {{#link-to 'group/restaurants' group classNames='group-name capitalize'}}
-      <img src="/assets/images/a.svg" class="group-logo img-circle">
-      {{#if group.name.length }} {{group.name}} {{else}} Untitled {{/if}}
-    {{/link-to}}
+  <div class="col-md-12">
+    {{#each group in content.groups }}
+    <div class="col-md-2 col-sm-3 col-xs-6 group">
+      {{#link-to 'group/restaurants' group classNames='group-name capitalize'}}
+        <img src="/assets/images/a.svg" class="group-logo img-circle">
+        {{#if group.name.length }} {{group.name}} {{else}} Untitled {{/if}}
+      {{/link-to}}
+    </div>
+    {{ else }}
+      <p>you have no groups dude : (</p>
+      <p>create one!</p>
+    {{/each}}
   </div>
-  {{ else }}
-    <p>you have no groups dude : (</p>
-    <p>create one!</p>
-  {{/each}}
 </div>

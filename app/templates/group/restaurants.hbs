@@ -1,30 +1,9 @@
-<h2 class="capitalize">{{#if name }} {{ name }} {{ else }} Untitled {{/if}}</h2>
+<h2 class="capitalize">{{#if name.length }} {{name}} {{else}} Untitled {{/if}}</h2>
 
-<div class="row">
-  <div class="col-md-12">
-    {{#link-to 'group/new-restaurant' id classNames='btn btn-lg btn-success'}}
-      Add restaurant
-    {{/link-to}}
-    {{#link-to '' classNames='btn btn-lg btn-success'}}
-      Invite
-    {{/link-to}}
-    {{#link-to '' classNames='btn btn-lg btn-default'}}
-      Edit
-    {{/link-to}}
-    {{#link-to '' classNames='btn btn-lg btn-default'}}
-      Remove
-    {{/link-to}}
-  </div>
-</div>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button>
-
-
-<br>
-
+{{!-- {{#view "bs-modal" title="Time countdown"}}
+  Launch modal
+{{/view}}
+ --}}
 <div class="row">
   <div class="col-md-12">
     {{#link-to '' classNames='btn btn-lg btn-success'}}
@@ -38,6 +17,9 @@
     {{/link-to}}
     {{#link-to '' classNames='btn btn-lg btn-success'}}
       Members
+    {{/link-to}}
+    {{#link-to '' classNames='btn btn-lg btn-success'}}
+      {{ fa-icon "plus" }} Add
     {{/link-to}}
   </div>
 </div>
