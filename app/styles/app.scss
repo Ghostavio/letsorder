@@ -38,8 +38,8 @@ h1, h2, h3, h4, h5 {
   text-transform: capitalize;
 }
 
-.liquid-container {
-  margin-top: 70px;
+.main {
+  margin-top: 50px;
 }
 
 .alert-link {
@@ -173,6 +173,7 @@ a.restaurant-name {
   position: relative;
   font-size: 1em;
   font-family: $font-body;
+  cursor: pointer;
   word-break: break-all;
   &:hover, a:focus {
     text-decoration: none;
