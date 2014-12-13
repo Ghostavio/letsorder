@@ -31,6 +31,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
+  margin-top: 0;
   font-family: $font-body;
 }
 
@@ -77,6 +78,12 @@ noscript {
 
 .main {
   margin-top: 70px;
+  background-image:url('/assets/images/front.jpg');
+  background-opacity: 0.8;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size: cover;
+  height: 100vh;
 }
 
 .alert-link {
@@ -88,16 +95,19 @@ noscript {
 
 .friend-name {
   display: table;
-  background-color: #BABACA;
+  background-color: $lightgray;
   padding: 4px 6px;
   border-radius: 5px;
   line-height: 30px;
   margin: 8px 0;
   cursor: pointer;
+  &:hover {
+    background-color: darken($lightgray, 3%);
+  }
 }
 
 .selected-friend {
-  background-color: green;
+  background-color: $green;
 }
 
 li.no-style {
@@ -248,4 +258,26 @@ ul.friends-list {
   font-size: 18px;
   height: 54px;
 }
+
+.col-centered{
+  text-align: center;
+  float: none;
+  margin: 0 auto;
+  margin-top: 30vh;
+}
+
+.col-centered-navbar{
+  text-align: center;
+  float: none;
+  margin: 0 auto;
+}
+
+.front {
+  background-image:url('/assets/images/front.jpg');
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+  background-size: 100%;
+}
+
 
