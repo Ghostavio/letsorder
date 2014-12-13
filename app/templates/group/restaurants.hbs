@@ -6,9 +6,6 @@
       Add restaurant
     {{/link-to}}
     {{#link-to '' classNames='btn btn-lg btn-success'}}
-      Members
-    {{/link-to}}
-    {{#link-to '' classNames='btn btn-lg btn-success'}}
       Invite
     {{/link-to}}
     {{#link-to '' classNames='btn btn-lg btn-default'}}
@@ -20,7 +17,11 @@
   </div>
 </div>
 
-{{#view "bs-popover" title="And here's some amazing content. It's very engaging. Right?"}}Click to toggle popover{{/view}}
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
 
 <br>
 
@@ -34,6 +35,9 @@
     {{/link-to}}
     {{#link-to '' classNames='btn btn-lg btn-success'}}
       Favourites
+    {{/link-to}}
+    {{#link-to '' classNames='btn btn-lg btn-success'}}
+      Members
     {{/link-to}}
   </div>
 </div>

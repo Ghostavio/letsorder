@@ -129,6 +129,10 @@ li.no-style {
   font-family: $font-body;
 }
 
+.navbar-brand > img {
+  display: inline;
+}
+
 /* GROUP */
 .group {
   text-align: center;
@@ -173,6 +177,12 @@ a.restaurant-name {
   &:hover, a:focus {
     text-decoration: none;
   }
+}
+
+.logo {
+  margin-top: -3px;
+  display: inline;
+  height: 30px;
 }
 
 /* FRIENDS */
