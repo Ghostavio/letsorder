@@ -7,7 +7,7 @@ export default Ember.Route.extend({
   },
   actions: {
     close: function() {
-      window.$('.overlay').hide();
+      window.$('.overlay').addClass('hidden');
     }
   },
   renderTemplate: function() {

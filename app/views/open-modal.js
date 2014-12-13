@@ -4,6 +4,6 @@ export default Ember.View.extend({
   tagName: 'a',
   classNames: ['restaurant-name'],
   click: function() {
-    $('.overlay').show();
+    window.$('.overlay').removeClass('hidden');
   }
 });
