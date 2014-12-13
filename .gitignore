@@ -16,9 +16,6 @@
 npm-debug.log
 testem.log
 
-# let's get rid of cordova right now
-cordova
-
 # iOS
 cordova/platforms/ios/build/
 cordova/platforms/ios/www/

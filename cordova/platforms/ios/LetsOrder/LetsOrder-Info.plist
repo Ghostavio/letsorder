@@ -182,5 +182,18 @@
         <string>{768, 1024}</string>
       </dict>
     </array>
+    <key>FacebookAppID</key>
+    <string>1517752561842606-</string>
+    <key>FacebookDisplayName</key>
+    <string>letsorder</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb1517752561842606-</string>
+        </array>
+      </dict>
+    </array>
   </dict>
 </plist>
