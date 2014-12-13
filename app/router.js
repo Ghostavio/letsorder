@@ -9,8 +9,9 @@ Router.map(function() {
   this.route('login');
   this.route('group');
   this.route('group/new');
-  this.route('group/restaurants', { path: 'group/:id' });
+  this.route('group/restaurants',    { path: 'group/:id' });
   this.route('group/new-restaurant', { path: 'group/:group_id/new' });
+  this.route('group/order',          { path: 'group/:group_id/restaurant/:restaurant_id/order' });
 });
 
 Router.reopen({
