@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('group/new');
   this.route('group/restaurants',    { path: 'group/:id' });
   this.route('group/new-restaurant', { path: 'group/:group_id/new' });
+  this.route('group/timer',          { path: 'group/:group_id/restaurant/:restaurant_id/timer' });
   this.route('group/order',          { path: 'group/:group_id/restaurant/:restaurant_id/order' });
 });
 
