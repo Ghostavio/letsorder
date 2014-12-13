@@ -1,23 +1,21 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  itemName: null,
+  name: null,
   needs: ['user'],
   actions: {
     addItem: function() {
       var self = this,
           currentUser = this.get('controllers.user').get('currentUser');
-      debugger;
-      var newItem = this.store.createRecord('menuItem', {
-        name: this.get('itemName'),
+      var newItem = this.store.createRecord('menu-item', {
+        name: this.get('name'),
         user: currentUser,
         restaurant: self.get('model'),
         group: self.get('model').get('group').content
       });
-
       newItem.save().then(function(data){
-        // self.get('model').get('restaurants').pushObject(data);
-        // self.get('model').save();
+        self.get('model').get('items').pushObject(data);
+        self.get('model').save();
         self.setProperties({
           name: null
         });
