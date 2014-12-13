@@ -1,9 +1,9 @@
 {{#unless "controller.dontShowHeader"}}
-  {{partial "header"}}
+  {{ partial "header" }}
 {{/unless}}
 <main class="main">
   <div class="container">
-    {{liquid-outlet name="main"}}
+    {{ outlet main }}
   </div>
 </main>
-{{liquid-outlet modal}}
+{{ outlet modal }}

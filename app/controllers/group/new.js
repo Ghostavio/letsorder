@@ -16,10 +16,14 @@ export default Ember.Controller.extend({
       newGroup.get('members').pushObject(currentUser);
       selectedFriends.forEach(function(i) {
         newGroup.get('members').pushObject(i);
+        i.get('groups').pushObject(newGroup);
       });
       newGroup.save().then(function(data){
         currentUser.get('groups').pushObject(data);
         currentUser.save();
+        selectedFriends.forEach(function(i) {
+          i.save();
+        });
         self.setProperties({
           name: null
         });

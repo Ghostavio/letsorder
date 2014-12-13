@@ -16,6 +16,8 @@ export default Ember.Controller.extend({
         group: self.get('model')
       });
       newRestaurant.save().then(function(data){
+        self.get('model').get('restaurants').pushObject(data);
+        self.get('model').save();
         self.setProperties({
           name: null,
           phone: null,

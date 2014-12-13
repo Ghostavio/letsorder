@@ -38,8 +38,8 @@ h1, h2, h3, h4, h5 {
   text-transform: capitalize;
 }
 
-.liquid-container {
-  margin-top: 70px;
+.main {
+  margin-top: 50px;
 }
 
 .alert-link {
@@ -161,6 +161,7 @@ li.no-style {
   position: relative;
   font-size: 1.5em;
   font-family: $font-header;
+  cursor: pointer;
   word-break: break-all;
 }
 
