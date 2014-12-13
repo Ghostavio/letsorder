@@ -133,8 +133,14 @@ li.no-style {
   display: inline;
 }
 
+.navbar-brand.small {
+  margin:0 auto;
+  text-align: center;
+}
+
 /* GROUP */
 .group {
+  margin-top: 20px;
   text-align: center;
   background: $white;
   &:hover {
@@ -150,7 +156,6 @@ a.group-name {
   position: relative;
   font-size: 1em;
   font-family: $font-body;
-  word-break: break-all;
   &:hover, a:focus {
     text-decoration: none;
   }
@@ -158,6 +163,7 @@ a.group-name {
 
 /* RESTAURANT */
 .restaurant {
+  margin-bottom: 50px;
   text-align: center;
   background: $white;
   &:hover {
