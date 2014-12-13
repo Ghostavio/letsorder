@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
   needs: ['user'],
   selectedFriends: [],
   actions: {
-    createRoom: function() {
+    createGroup: function() {
       var self = this,
           currentUser = this.get('controllers.user').get('currentUser'),
           selectedFriends = this.get('selectedFriends');
