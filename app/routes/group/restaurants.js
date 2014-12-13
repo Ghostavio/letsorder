@@ -15,8 +15,5 @@ export default Ember.Route.extend({
     this.render('-modal', {
         outlet:'modal'
     });
-    this.render('-timer', {
-        outlet:'modalcontent'
-    });
   }
 });
