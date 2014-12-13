@@ -2,7 +2,7 @@
   <div class="col-md-12">
     <ul class="friends-list ul-inline-block">
     {{#each item in content.items}}
-      {{#view 'item-select' friendBinding="this"}}
+      {{#view 'item-select' item=item}}
         {{ item.name }}
       {{/view}}
     {{/each}}
