@@ -34,6 +34,35 @@ h1, h2, h3, h4, h5 {
   font-family: $font-body;
 }
 
+noscript {
+  width: 800px;
+  height: 600px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  color: #C71F40;
+  p, ul {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  ul {
+    list-style: disc inside;
+  }
+}
+
+.txt-align-center {
+  text-align: center;
+}
+
+.txt-align-left {
+  text-align: left;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
