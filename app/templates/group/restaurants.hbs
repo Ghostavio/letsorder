@@ -31,7 +31,7 @@
     {{#each restaurant in content.restaurants }}
       <div class="col-md-2 col-sm-3 col-xs-6 restaurant">
         {{#link-to "group/timer" restaurant.group.id restaurant.id classNames="restaurant-name"}}
-          <img {{ bind-attr src=restaurant.picture class="group-logo img-circle" }}>
+          <img {{ bind-attr src=restaurant.picture }} class="group-logo img-circle">
           {{ restaurant.name }}
         {{/link-to}}
       </div>
