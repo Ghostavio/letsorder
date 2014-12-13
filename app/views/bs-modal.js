@@ -5,6 +5,6 @@ export default Ember.View.extend({
   classNames: ['btn', 'btn-lg', 'btn-danger'],
   attributeBindings: ['title'],
   didInsertElement: function() {
-    this.$().modal();
+    this.$().modal('show');
   }
 });
