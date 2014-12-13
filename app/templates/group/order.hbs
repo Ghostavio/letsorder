@@ -1,1 +1,8 @@
-{{outlet}}
+{{#each item in content.menuItems}}
+  {{ item.name }}
+{{/each}}
+<form {{ action "addItem" on="submit" }}>
+  {{ input name="itemName" value=menuItems.name classNames='form-control' placeholder="What do you want?" }}
+
+  <button class="btn btn-success btn-lg" type="submit">Add</button>
+</form>
