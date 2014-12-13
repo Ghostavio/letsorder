@@ -37,7 +37,6 @@ export default Ember.Controller.extend({
       selectedItems.forEach(function(i) {
         newItem.get('items').pushObject(i);
       });
-      debugger;
       newItem.save().then(function(data) {
         self.transitionToRoute('group/summary', self.get('model').get('group').content.id, self.get('model').get('id'), currentOrder.id);
       });
