@@ -1,6 +1,12 @@
-{{#each item in content}}
-  {{ item.user.name }}
-  {{#each order in item.items}}
-    {{order.name}}
-  {{/each}}
+{{#each item in content.items}}
+  <div class="row">
+    <div class="col-md-12">
+      {{ item.user.name }}
+      <ul>
+      {{#each order in item.items}}
+        <li>{{order.name}}</li>
+      {{/each}}
+      </ul>
+    </div>
+  </div>
 {{/each}}

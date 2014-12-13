@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   needs: ['user', 'group/order'],
-  currentOrder: null,
   actions: {
     setOrder: function() {
       var self = this,
@@ -14,9 +13,7 @@ export default Ember.Controller.extend({
         restaurant: self.get('model'),
         group: self.get('model').get('group').content
       });
-      newOrder.save().then(function(data){
-        self.get('controllers.group/order').set('currentOrder', data);
-        self.set('currentOrder', data);
+      newOrder.save().then(function(data) {
         self.transitionToRoute('group/order', self.get('model').get('group').content.id, self.get('model').get('id'), data.id);
       });
     }
