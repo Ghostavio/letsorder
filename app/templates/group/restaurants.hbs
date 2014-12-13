@@ -27,15 +27,17 @@
 <br>
 
 <div class="row">
-  {{#each restaurant in content.restaurants }}
-    <div class="col-md-2 col-sm-3 col-xs-6 restaurant">
-      {{#link-to "group/timer" restaurant.group.id restaurant.id}}
-        <img src="/assets/images/a.svg" class="restaurant-logo img-circle">
-        {{ restaurant.name }}
-      {{/link-to}}
-    </div>
-  {{ else }}
-    <p>You have no restaurants added :(</p>
-    <p>Create one!</p>
-  {{/each}}
+  <div class="col-md-12">
+    {{#each restaurant in content.restaurants }}
+      <div class="col-md-2 col-sm-3 col-xs-6 restaurant">
+        {{#link-to "group/timer" restaurant.group.id restaurant.id}}
+          <img src="/assets/images/a.svg" class="restaurant-logo img-circle">
+          {{ restaurant.name }}
+        {{/link-to}}
+      </div>
+    {{ else }}
+      <p>You have no restaurants added :(</p>
+      <p>Create one!</p>
+    {{/each}}
+  </div>
 </div>
