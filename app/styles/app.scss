@@ -55,6 +55,14 @@ noscript {
   }
 }
 
+.ul-inline-block li {
+  display: inline-block;
+  margin: 5px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
 .txt-align-center {
   text-align: center;
 }

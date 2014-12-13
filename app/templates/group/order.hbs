@@ -1,9 +1,12 @@
 <div class="row">
   <div class="col-md-12">
-
+    <ul class="friends-list ul-inline-block">
     {{#each item in content.items}}
-      {{ item.name }}
+      {{#view 'item-select' friendBinding="this"}}
+        {{ item.name }}
+      {{/view}}
     {{/each}}
+    </ul>
   </div>
 </div>
 
