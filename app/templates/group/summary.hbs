@@ -1,8 +1,12 @@
+{{#view 'timer-tick'}}
+  Timer: {{ content.timer }}
+{{/view}}
+
 {{#each item in content.items}}
   <div class="row">
     <div class="col-md-12">
       {{ item.user.name }}
-      <ul>
+      <ul class="friends-list">
       {{#each order in item.items}}
         <li>{{order.name}}</li>
       {{/each}}
