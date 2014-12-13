@@ -2,7 +2,11 @@
   <div class="modal">
     <div class="close" {{ action "close" }}>X</div>
     <div {{ action bubbles=false }}>
-      {{ outlet modalcontent }}
+      <div class="row">
+       <div class="col-md-12">
+        {{ outlet modalcontent }}
+       </div>
+      </div>
     </div>
   </div>
 </div>
