@@ -1,6 +1,10 @@
 <div class="modal">
-  <div class="close" {{ action "close" }}>X</div>
-  <div {{ action bubbles=false }}>
-    {{ partial "timer" }}
+ <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="close" {{ action "close" }}>&times</div>
+        <div {{ action bubbles=false }}>
+          {{ partial "timer" }}
+        </div>
+    </div>
   </div>
 </div>

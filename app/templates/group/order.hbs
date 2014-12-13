@@ -1,8 +1,19 @@
-{{#each item in content.items}}
-  {{ item.name }}
-{{/each}}
-<form {{ action "addItem" on="submit" }}>
-  {{ input name="name" value=controller.name classNames='form-control' placeholder="What do you want?" }}
+<div class="row">
+  <div class="col-md-12">
 
-  <button class="btn btn-success btn-lg" type="submit">Add</button>
-</form>
+    {{#each item in content.items}}
+      {{ item.name }}
+    {{/each}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form {{ action "addItem" on="submit" }}>
+      <div class="form-group">
+        {{ input name="name" value=controller.name classNames='form-control' placeholder="What do you want?" }}
+      </div>
+      <button class="btn btn-success btn-lg" type="submit">Add</button>
+    </form>
+  </div>
+</div>

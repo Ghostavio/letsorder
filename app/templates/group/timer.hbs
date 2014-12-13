@@ -1,5 +1,38 @@
-timer here yo
+<h2>Set timer</h2>
 
-{{#link-to "group/order" group.id id}}
-  Ok
+<br>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="btn-group" role="group" aria-label="...">
+      <button type="button" class="btn btn-default btn-lg">5</button>
+      <button type="button" class="btn btn-default btn-lg">10</button>
+      <button type="button" class="btn btn-default btn-lg">15</button>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="btn-group">
+      <button type="button" class="btn btn-default btn-lg">Current location</button>
+      <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+        <span class="caret"></span>
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Office</a></li>
+        <li><a href="#">Joe's place</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<br>
+
+{{#link-to "group/order" group.id id classNames="btn btn-success btn-lg"}}
+  Start!
 {{/link-to}}
