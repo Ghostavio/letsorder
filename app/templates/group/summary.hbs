@@ -1,10 +1,10 @@
 {{#each item in content.items}}
   <div class="row">
     <div class="col-md-12">
-      {{ item.user.name }}
-      <ul>
+      <h3>{{ item.user.name }}</h3>
+      <ul class="order-list">
       {{#each order in item.items}}
-        <li>{{order.name}}</li>
+        <li class="order-name no-style">{{order.name}}</li>
       {{/each}}
       </ul>
     </div>

@@ -1,15 +1,15 @@
-<nav class="navbar navbar-default navbar-fixed-top hidden-sm hidden-xs">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      {{#link-to 'index' classNames='navbar-brand'}}
+    {{#link-to 'index' classNames='navbar-brand back-button visible-sm visible-xs'}}
+      {{ fa-icon "chevron-left" }}
+    {{/link-to}}
+    {{#link-to 'index' classNames='navbar-brand'}}
       <img src="/assets/images/logo.svg" class="logo">
       let's order
-      {{/link-to}}
-    </div>
-    <div class="pull-right">
-    </div>
+    {{/link-to}}
     <div class="dropdown pull-right navbar-brand">
-      <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+      <a id="dLabel" data-target="#" href="" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
         {{ fa-icon "bars" }}
       </a>
       <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
@@ -24,63 +24,10 @@
           {{/link-to}}
           </li>
           <li>
-          {{#link-to '' classNames=''}}
-            Log out
-          {{/link-to}}
+            <a {{ action 'invalidateSession' }} class="">Logout </a>
           </li>
       </ul>
     </div>
-  </div>
-  <div class="navbar-collapse navbar-ex5-collapse">
-    {{outlet header}}
-  </div>
-</nav>
-<nav class="navbar navbar-default navbar-fixed-top visible-sm visible-xs">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-      {{#link-to 'index' classNames='navbar-brand'}}
-        {{ fa-icon "chevron-left" }}
-      {{/link-to}}
-      </div>
-
-      <div class="col-md-3 col-centered-navbar">
-        <div class="">
-          {{#link-to 'index' classNames='navbar-brand small'}}
-            <img src="/assets/images/logo.svg" class="logo">
-            let's order
-          {{/link-to}}
-        </div>
-      </div>
-
-      <div class="col-md-2">
-        <div class="pull-right">
-        </div>
-        <div class="dropdown pull-right navbar-brand">
-          <a id="dLabel" data-target="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-            {{ fa-icon "bars" }}
-          </a>
-
-          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-            <li>
-            {{#link-to '' classNames=''}}
-              Invite
-            {{/link-to}}
-            </li>
-            <li>
-            {{#link-to '' classNames=''}}
-              Settings
-            {{/link-to}}
-            </li>
-            <li>
-            {{#link-to '' classNames=''}}
-              Log out
-            {{/link-to}}
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
   </div>
 </nav>
-

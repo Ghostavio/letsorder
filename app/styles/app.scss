@@ -56,14 +56,6 @@ noscript {
   }
 }
 
-.ul-inline-block li {
-  display: inline-block;
-  margin: 5px;
-  &:first-child {
-    margin-left: 0;
-  }
-}
-
 .txt-align-center {
   text-align: center;
 }
@@ -83,11 +75,27 @@ noscript {
 body.style-login {
   margin-top: -50px;
   background-image:url('/assets/images/front_opacity.jpg');
-  background-opacity: 0.8;
   background-repeat:no-repeat;
   background-position:center;
   background-size: cover;
   height: 95vh;
+  div {
+    nav {
+      div {
+        .back-button {
+          display: none!important;
+        }
+        div.dropdown {
+          display: none!important;
+        }
+      }
+    }
+    nav.navbar {
+      border: none;
+      opacity: 0.8;
+    }
+  }
+
 }
 
 .alert-link {
@@ -95,27 +103,6 @@ body.style-login {
   display: block;
   width: 270px;
   text-align: center;
-}
-
-.friend-name {
-  display: table;
-  background-color: $lightgray;
-  padding: 4px 6px;
-  border-radius: 5px;
-  line-height: 30px;
-  margin: 8px 0;
-  cursor: pointer;
-  &:hover {
-    background-color: darken($lightgray, 3%);
-  }
-}
-
-.selected-friend {
-  background-color: $green;
-}
-
-li.no-style {
-  list-style-type: none;
 }
 
 .modal {
@@ -162,11 +149,14 @@ li.no-style {
   }
 }
 
-.fa-coffee {
-  font-size: 26px;
-  color: $yellow;
+.btn-xlg {
+  padding: 18px 28px;
+  font-size: 22px;
+  line-height: normal;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
 }
-
 
 /* NAVBAR */
 .navbar {
@@ -189,7 +179,17 @@ li.no-style {
   text-align: center;
 }
 
-/* GROUP */
+.navbar-header {
+  width: 100%;
+}
+
+.logo {
+  margin-top: -3px;
+  display: inline;
+  height: 30px;
+}
+
+/* GROUPS */
 .group {
   margin-top: 20px;
   text-align: center;
@@ -237,15 +237,46 @@ a.restaurant-name {
   }
 }
 
-.logo {
-  margin-top: -3px;
-  display: inline;
-  height: 30px;
+/* LISTS */
+.ul-inline-block li {
+  display: inline-block;
+  margin: 5px;
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
-/* FRIENDS */
 ul.friends-list {
   padding-left: 0;
+}
+
+.friend-name {
+  display: table;
+  background-color: $lightgray;
+  padding: 4px 6px;
+  border-radius: 5px;
+  line-height: 30px;
+  margin: 8px 0;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($lightgray, 3%);
+  }
+}
+
+ul.order-list {
+  padding-left: 0;
+}
+
+.order-name {
+  @extend .friend-name;
+}
+
+.selected-friend {
+  background-color: $green;
+}
+
+li.no-style {
+  list-style-type: none;
 }
 
 /* DROPDOWN */
@@ -263,6 +294,7 @@ ul.friends-list {
   height: 54px;
 }
 
+/* COLUMNS */
 .col-centered{
   text-align: center;
   float: none;
@@ -275,22 +307,4 @@ ul.friends-list {
   float: none;
   margin: 0 auto;
 }
-
-.front {
-  background-image:url('/assets/images/front.jpg');
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:center;
-  background-size: 100%;
-}
-
-.btn-xlg {
-    padding: 18px 28px;
-    font-size: 22px; //change this to your desired size
-    line-height: normal;
-    -webkit-border-radius: 8px;
-       -moz-border-radius: 8px;
-            border-radius: 8px;
-}
-
 

@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.View.extend({
   tagName: 'li',
-  classNames: ['friend-name no-style'],
+  classNames: ['order-name no-style'],
   click: function() {
     var selectedItems = this.get('controller').get('selectedItems'),
         item = this.get('item');
