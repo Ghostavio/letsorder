@@ -74,21 +74,14 @@ noscript {
 
 body.style-login {
   margin-top: -50px;
-  background-image:url('/assets/images/front_opacity.jpg');
+  background-image:url('/assets/images/front.jpg');
   background-repeat:no-repeat;
   background-position:center;
   background-size: cover;
   height: 95vh;
   div {
     nav {
-      div {
-        .back-button {
-          display: none!important;
-        }
-        div.dropdown {
-          display: none!important;
-        }
-      }
+      display: none!important;
     }
     nav.navbar {
       border: none;
@@ -174,9 +167,9 @@ body.style-login {
   display: inline;
 }
 
-.navbar-brand.small {
-  margin:0 auto;
-  text-align: center;
+.navbar-menu {
+  @extend .navbar-brand;
+  margin-right:-25px;
 }
 
 .navbar-header {
@@ -187,6 +180,22 @@ body.style-login {
   margin-top: -3px;
   display: inline;
   height: 30px;
+}
+
+.logo-small {
+  color: $dark!important;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: $font-body;
+  float: none!important;
+  margin-top: 15px;
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+.logo-large {
+  margin-left: -25px!important;
 }
 
 /* GROUPS */
@@ -235,6 +244,14 @@ a.restaurant-name {
   &:hover, a:focus {
     text-decoration: none;
   }
+}
+
+/* LOGIN */
+.login-form {
+  padding: 30px;
+  background-color: #FFFFFF;
+  height: 50vh;
+  min-height: 300px!important;
 }
 
 /* LISTS */
@@ -295,7 +312,7 @@ li.no-style {
 }
 
 /* COLUMNS */
-.col-centered{
+.col-centered-login {
   text-align: center;
   float: none;
   margin: 0 auto;
@@ -306,5 +323,6 @@ li.no-style {
   text-align: center;
   float: none;
   margin: 0 auto;
+  margin-top: 8px;
 }
 
