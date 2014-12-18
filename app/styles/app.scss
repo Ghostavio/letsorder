@@ -33,6 +33,7 @@ body {
 h1, h2, h3, h4, h5 {
   margin-top: 0;
   font-family: $font-body;
+  font-weight: 300;
 }
 
 noscript {
@@ -69,16 +70,19 @@ noscript {
 }
 
 .main {
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
-body.style-login {
+body.style-group > div > .main {
+  @extend .container;
+}
+
+body.style-login > div > .main {
+  @extend .container-fluid;
+}
+
+body.style-index, body.style-login{
   margin-top: -50px;
-  background-image:url('/assets/images/front.jpg');
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size: cover;
-  height: 95vh;
   div {
     nav {
       display: none!important;
@@ -88,7 +92,6 @@ body.style-login {
       opacity: 0.8;
     }
   }
-
 }
 
 .alert-link {
@@ -122,13 +125,13 @@ body.style-login {
 
 /* BUTTONS */
 .btn {
+  border: none;
   border-radius: 4px;
 }
 
 .btn-facebook {
   background: $facebook-bg;
   color: $white;
-  border: none;
   &:hover{
     color: $white;
   }
@@ -307,11 +310,23 @@ li.no-style {
 
 /* FORMS */
 .form-control {
+  border: none;
   font-size: 18px;
-  height: 54px;
+  height: 43px;
+}
+
+.input-xlg {
+  padding-left: 20px;
+  height: 63px;
 }
 
 /* COLUMNS */
+.col-centered {
+  text-align: center;
+  float: none;
+  margin: 0 auto;
+}
+
 .col-centered-login {
   text-align: center;
   float: none;
@@ -324,5 +339,65 @@ li.no-style {
   float: none;
   margin: 0 auto;
   margin-top: 8px;
+}
+
+/* LANDING */
+.section {
+  padding: 5em 1em;
+}
+
+.section-accent {
+  color: $gray;
+  background-color: $lightgreen;
+}
+
+.section-header {
+  color: $white;
+  h1 {
+    color: $white;
+    font-size: 3.5em;
+    font-weight: 300;
+  }
+}
+
+.section-header {
+  background-image:url('/assets/images/front_blur.jpg');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+
+h1.logo-text {
+  font-size: 2.3em;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+/* FOOTER */
+footer {
+  color: $white;
+  background-color: $gray;
+}
+
+footer .footer-below {
+  padding: 25px 25px;
+}
+
+.seen-in {
+  img {
+    height: 128px;
+  }
+  .fa {
+    color: $lightgray;
+    font-size: 120px;
+    padding: 50px;
+  }
+}
+
+address > a {
+  color: $white;
+  &:hover {
+    color: $lightgray;
+  }
 }
 
