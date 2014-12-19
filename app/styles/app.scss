@@ -417,3 +417,12 @@ address > a {
   height: 25px!important;
 }
 
+.sharing {
+  color: $white;
+  margin-right: 10px;
+  margin-left: 10px;
+  &:hover {
+    color: $lightgray;
+    text-decoration: none;
+  }
+}
