@@ -10,14 +10,16 @@
           <br>
           <br>
           <div class="row">
-            <div class="col-xs-10 col-sm-8 col-md-6 col-lg-5 col-centered">
+            <div class="col-xs-8 col-sm-8 col-md-6 col-lg-5 col-centered">
               <p class="">Be one of the first to know when our app is released. Please enter your email below.</p>
-              <div class="input-group">
-                <input type="text" class="form-control input-xlg" placeholder="Email Address">
-                <span class="input-group-btn">
-                  <button class="btn btn-success btn-xlg" type="button">Sign up</button>
-                </span>
-              </div>
+              <form {{ action "subscribeEmail" on="submit" }}>
+                <div class="input-group">
+                  {{ input name="email" value=controller.email classNames='form-control input-lg' placeholder="Email Address" }}
+                  <span class="input-group-btn">
+                    <button class="btn btn-success btn-lg" type="submit">Sign up</button>
+                  </span>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -66,7 +68,7 @@
                   <div class="col-xs-12 text-center">
                     <br>
                     <address>
-                      <a href="mailto:#">contact@letsorder.me</a>
+                      <a href="mailto:contact@letsorder.me">contact@letsorder.me</a>
                     </address>
                   </div>
               </div>
