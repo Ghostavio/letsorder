@@ -313,6 +313,7 @@ li.no-style {
   border: none;
   font-size: 18px;
   height: 43px;
+  border-radius: 4px;
 }
 
 .input-xlg {
@@ -387,6 +388,7 @@ footer .footer-below {
   img {
     height: 128px;
     padding-right: 50px;
+    margin-top: 30px;
   }
   .fa {
     color: $lightgray;
