@@ -14,7 +14,7 @@
               <p class="">Be one of the first to know when our app is released. Please enter your email below.</p>
               <form {{ action "subscribeEmail" on="submit" }} class="form-inline" role="form">
                 <div class="form-group">
-                  {{ input type="email" name="email" value=controller.email classNames='form-control input-lg' placeholder="Email Address" }}
+                  {{ input type="email" name="email" value=controller.email classNames='form-control input-lg' placeholder="Email Address" required="" }}
                 </div>
                 <button type="submit" class="btn btn-success btn-lg">Sign up</button>
               </form>
