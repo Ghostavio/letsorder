@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Let's Order</title>
+
     <link rel="canonical" href="http://letsorder.me">
     <link rel="dns-prefetch" href="//www.google-analytics.com">
     <link rel="dns-prefetch" href="http://connect.facebook.net">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <meta name="application-name" content="Let's Order">
     <link rel="logo" type="image/svg" href="/assets/images/logo.svg">
+
+    <meta name="application-name" content="Let's Order">
     <meta name="description" content="Let's order is group ordering for you and your friends or colleagues.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta itemprop="name" content="Let's Order">
     <meta itemprop="description" content="Let's order is group ordering for you and your friends or colleagues.">
     <meta itemprop="image" content="/assets/images/logo.png">
-    <meta property="og:url" content="http://letsorder.me">
-    <meta property="og:type" content="website">
+
     <meta property="og:title" content="Let's Order">
-    <meta property="og:image" content="/assets/images/logo.png">
     <meta property="og:site_name" content="Let's Order">
-    <meta property="og:description" content="Let's order is group ordering for you and your friends or colleagues.">
+    <meta property="og:url" content="http://letsorder.me">
+    <meta property="og:description" content="Let's order is group ordering for you and your friends or colleagues, streamlining the order for the restaurant and cutting wait times for customers hungry for their delivery.">
+    <meta property="og:image" content="/assets/images/logo.png">
+    <meta property="fb:app_id" content="1517752561842606">
+
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@letsorderme">
     <meta name="twitter:url" content="http://letsorder.me">
@@ -46,6 +51,17 @@
     {{content-for 'head-footer'}}
   </head>
   <body class="initial-load">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-57612187-1', 'auto');
+      ga('send', 'pageview');
+      FB.init({ appId: '1517752561842606' });
+    </script>
+
     <noscript class="txt-align-center">
       <p class="txt-align-left"><strong>Oh noes, it looks like your Javascript is disabled for some reason.</strong></p>
       <p class="txt-align-left">See, that's a bummer, this amazing app needs it to run : (</p>
@@ -63,18 +79,9 @@
     </noscript>
     {{content-for 'body'}}
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-57612187-1', 'auto');
-      ga('send', 'pageview');
-      FB.init({ appId: '1517752561842606' });
-    </script>
     <script src="assets/vendor.js"></script>
     <script src="assets/lets-order.js"></script>
+    <script src="http://platform.twitter.com/widgets.js" id="twitter-wjs"></script>
 
     {{content-for 'body-footer'}}
   </body>
