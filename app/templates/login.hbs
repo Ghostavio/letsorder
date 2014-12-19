@@ -1,5 +1,8 @@
 <div class="row">
-  <div class="col-md-12 col-centered">
+  <div class="col-md-6 col-sm-8 col-xs-10 col-centered-login login-form">
+    <img src="/assets/images/logo.svg" class="login-logo">
+    <h1 class="logo-text">let's order</h1>
+    <br>
     {{#if session.isAuthenticated}}
       <button {{ action 'invalidateSession' }} class="btn btn-full btn-xlg btn-danger">Logout</button>
     {{else}}
@@ -7,3 +10,4 @@
     {{/if}}
   </div>
 </div>
+

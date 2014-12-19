@@ -1,33 +1,47 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-    {{#link-to 'index' classNames='navbar-brand back-button visible-sm visible-xs'}}
-      {{ fa-icon "chevron-left" }}
-    {{/link-to}}
-    {{#link-to 'index' classNames='navbar-brand'}}
-      <img src="/assets/images/logo.svg" class="logo">
-      let's order
-    {{/link-to}}
-    <div class="dropdown pull-right navbar-brand">
-      <a id="dLabel" data-target="#" href="" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-        {{ fa-icon "bars" }}
-      </a>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-          <li>
-          {{#link-to '' classNames=''}}
-            Invite
-          {{/link-to}}
-          </li>
-          <li>
-          {{#link-to '' classNames=''}}
-            Settings
-          {{/link-to}}
-          </li>
-          <li>
-            <a {{ action 'invalidateSession' }} class="">Logout </a>
-          </li>
-      </ul>
-    </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="visible-sm visible-xs">
+            {{#link-to 'index' classNames='navbar-brand back-button'}}
+            {{ fa-icon "chevron-left" }}
+            {{/link-to}}
+          </div>
+          <div class="col-xs-10 hidden-sm hidden-xs">
+            {{#link-to 'index' classNames='navbar-brand logo-large'}}
+            <img src="/assets/images/logo.svg" class="logo">
+            let's order
+            {{/link-to}}
+          </div>
+          <div class="dropdown pull-right navbar-menu">
+            <a id="dLabel" data-target="#" href="" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+              {{ fa-icon "bars" }}
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+              <li>
+                {{#link-to '' classNames=''}}
+                Invite
+                {{/link-to}}
+              </li>
+              <li>
+                {{#link-to '' classNames=''}}
+                Settings
+                {{/link-to}}
+              </li>
+              <li>
+                <a {{ action 'invalidateSession' }} class="">Logout </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-centered-navbar visible-sm visible-xs">
+            {{#link-to 'index' classNames='logo-small'}}
+            <img src="/assets/images/logo.svg" class="logo">
+            let's order
+            {{/link-to}}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
