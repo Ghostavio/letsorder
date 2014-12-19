@@ -77,7 +77,7 @@ body.style-group > div > .main {
   @extend .container;
 }
 
-body.style-login > div > .main {
+body.style-login > div > .main, body.style-index > div > .main{
   @extend .container-fluid;
 }
 
