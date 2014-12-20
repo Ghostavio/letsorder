@@ -1,14 +1,20 @@
-<form {{ action "createGroup" on="submit" }}>
-  {{ input name="name" value=name classNames='form-control' placeholder="Name of the group" }}
-  <br>
-  <h3>Invite Friends</h3>
-  <ul class="friends-list">
-    {{#each content.friends}}
-      {{#view 'friend-select' friendBinding="this"}}
-        {{ name }}
-      {{/view}}
-    {{/each}}
-  </ul>
-  <br>
-  <button class="btn btn-success btn-lg" type="submit">Create Group</button>
-</form>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form {{ action "createGroup" on="submit" }}>
+        {{ input name="name" value=name classNames='form-control' placeholder="Name of the group" }}
+        <br>
+        <h3>Invite Friends</h3>
+        <ul class="friends-list">
+          {{#each content.friends}}
+            {{#view 'friend-select' friendBinding="this"}}
+              {{ name }}
+            {{/view}}
+          {{/each}}
+        </ul>
+        <br>
+        <button class="btn btn-success btn-lg" type="submit">Create Group</button>
+      </form>
+    </div>
+  </div>
+</div>
