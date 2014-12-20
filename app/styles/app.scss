@@ -229,6 +229,7 @@ a.logo-large {
 }
 
 a.group-name {
+  color: $black;
   position: relative;
   font-size: 1em;
   font-family: $font-body;
@@ -252,6 +253,7 @@ a.group-name {
 }
 
 a.restaurant-name {
+  color: $black;
   position: relative;
   font-size: 1em;
   font-family: $font-body;
@@ -315,14 +317,14 @@ ul.friends-list {
 
 .friend-name {
   display: table;
-  background-color: $lightgray;
+/*   background-color: $lightgray; */
   padding: 4px 6px;
   border-radius: 5px;
   line-height: 30px;
   margin: 8px 0;
   cursor: pointer;
   &:hover {
-    background-color: darken($lightgray, 3%);
+/*     background-color: darken($lightgray, 3%); */
   }
 }
 
