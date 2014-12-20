@@ -13,7 +13,7 @@
       {{#each group in content.groups }}
       <div class="col-md-2 col-sm-3 col-xs-6 group">
         {{#link-to 'group/restaurants' group classNames='group-name capitalize'}}
-          <img {{ bind-attr src=group.picture }} class="group-logo img-circle">
+          {{#if group.picture }} <img {{ bind-attr src=group.picture }} class="group-logo img-circle"> {{ else }} <img src="/assets/images/default-group-picture.svg" class="group-logo img-circle"> {{/if}}
           {{#if group.name }} {{ group.name }} {{ else }} Untitled {{/if}}
         {{/link-to}}
       </div>
