@@ -195,7 +195,8 @@ body.style-index, body.style-login{
 .logo-small {
   color: $dark!important;
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 900;
+  letter-spacing: -0.2px;
   font-family: $font-body;
   float: none!important;
   margin-top: 15px;
@@ -206,6 +207,11 @@ body.style-index, body.style-login{
 
 .logo-large {
   margin-left: -25px!important;
+}
+
+a.logo-large {
+  font-weight: 900;
+  letter-spacing: -0.2px;
 }
 
 /* GROUPS */
