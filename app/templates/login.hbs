@@ -1,13 +1,15 @@
-<div class="row">
-  <div class="col-md-6 col-sm-8 col-xs-10 col-centered-login login-form">
-    <img src="/assets/images/logo.svg" class="login-logo">
-    <h1 class="logo-text">let's order</h1>
-    <br>
-    {{#if session.isAuthenticated}}
-      <button {{ action 'invalidateSession' }} class="btn btn-full btn-xlg btn-danger">Logout</button>
-    {{else}}
-        <a {{ action 'authenticateWithFacebook' }} class="alert-link btn btn-xlg btn-facebook">{{ fa-icon "facebook-square" }}  Login with Facebook </a>
-    {{/if}}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-sm-8 col-xs-10 col-centered-login login-form">
+      <img src="/assets/images/logo.svg" class="login-logo">
+      <h1 class="logo-text">let's order</h1>
+      <br>
+      {{#if session.isAuthenticated}}
+        <button {{ action 'invalidateSession' }} class="btn btn-full btn-xlg btn-danger">Logout</button>
+      {{else}}
+          <a {{ action 'authenticateWithFacebook' }} class="alert-link btn btn-xlg btn-facebook">{{ fa-icon "facebook-square" }}  Login with Facebook </a>
+      {{/if}}
+    </div>
   </div>
 </div>
 

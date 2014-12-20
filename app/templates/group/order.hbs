@@ -1,23 +1,24 @@
-<div class="row">
-  <div class="col-md-12">
-    <ul class="order-list ul-inline-block">
-    {{#each item in content.restaurant.items}}
-      {{#view 'item-select' item=item}}
-        {{ item.name }}
-      {{/view}}
-    {{/each}}
-    </ul>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="order-list ul-inline-block">
+      {{#each item in content.restaurant.items}}
+        {{#view 'item-select' item=item}}
+          {{ item.name }}
+        {{/view}}
+      {{/each}}
+      </ul>
+    </div>
   </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12">
-    <form {{ action "addItem" on="submit" }}>
-      <div class="form-group">
-        {{ input name="name" value=controller.name classNames='form-control' placeholder="What do you want?" }}
-      </div>
-      <button class="btn btn-success btn-lg" type="submit">Add</button>
-      <button class="btn btn-success btn-lg" {{ action "goToSummary" }} >Next</button>
-    </form>
+  <div class="row">
+    <div class="col-md-12">
+      <form {{ action "addItem" on="submit" }}>
+        <div class="form-group">
+          {{ input name="name" value=controller.name classNames='form-control' placeholder="What do you want?" }}
+        </div>
+        <button class="btn btn-success btn-lg" type="submit">Add</button>
+        <button class="btn btn-success btn-lg" {{ action "goToSummary" }} >Next</button>
+      </form>
+    </div>
   </div>
 </div>

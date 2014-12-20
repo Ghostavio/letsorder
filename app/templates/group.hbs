@@ -1,27 +1,26 @@
-<h2>Groups</h2>
-
-<div class="row">
-  <div class="col-md-12">
-    {{#link-to 'group/new' classNames='btn btn-lg btn-success'}}
-      {{ fa-icon "plus" }} Create group
-    {{/link-to}}
-  </div>
-</div>
-
-<br>
-
-<div class="row">
-  <div class="col-md-12">
-    {{#each group in content.groups }}
-    <div class="col-md-2 col-sm-3 col-xs-6 group">
-      {{#link-to 'group/restaurants' group classNames='group-name capitalize'}}
-        <img {{ bind-attr src=group.picture }} class="group-logo img-circle">
-        {{#if group.name }} {{ group.name }} {{ else }} Untitled {{/if}}
+<div class="container">
+  <h2>Groups</h2>
+  <div class="row">
+    <div class="col-md-12">
+      {{#link-to 'group/new' classNames='btn btn-lg btn-success'}}
+        {{ fa-icon "plus" }} Create group
       {{/link-to}}
     </div>
-    {{ else }}
-      <p>You have no groups dude :(</p>
-      <p>Create one!</p>
-    {{/each}}
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      {{#each group in content.groups }}
+      <div class="col-md-2 col-sm-3 col-xs-6 group">
+        {{#link-to 'group/restaurants' group classNames='group-name capitalize'}}
+          <img {{ bind-attr src=group.picture }} class="group-logo img-circle">
+          {{#if group.name }} {{ group.name }} {{ else }} Untitled {{/if}}
+        {{/link-to}}
+      </div>
+      {{ else }}
+        <p>You have no groups dude :(</p>
+        <p>Create one!</p>
+      {{/each}}
+    </div>
   </div>
 </div>

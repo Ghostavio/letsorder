@@ -1,31 +1,30 @@
-<div class="row">
-  <div class="col-md-12">
-    <h2 class="capitalize">{{#if name.length }} {{name}} {{else}} Untitled {{/if}}</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="capitalize">{{#if name.length }} {{name}} {{else}} Untitled {{/if}}</h2>
+    </div>
   </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12">
-    {{#link-to 'group/new-restaurant' id classNames='btn btn-lg btn-success'}}
-      {{ fa-icon "plus" }} Add
-    {{/link-to}}
+  <div class="row">
+    <div class="col-md-12">
+      {{#link-to 'group/new-restaurant' id classNames='btn btn-lg btn-success'}}
+        {{ fa-icon "plus" }} Add
+      {{/link-to}}
+    </div>
   </div>
-</div>
-
-<br>
-
-<div class="row">
-  <div class="col-md-12">
-    {{#each restaurant in content.restaurants }}
-      <div class="col-md-2 col-sm-3 col-xs-6 restaurant">
-        {{#link-to "group/timer" restaurant.group.id restaurant.id classNames="restaurant-name"}}
-          <img {{ bind-attr src=restaurant.picture }} class="group-logo img-rounded">
-          {{ restaurant.name }}
-        {{/link-to}}
-      </div>
-    {{ else }}
-      <p>You have no restaurants added :(</p>
-      <p>Create one!</p>
-    {{/each}}
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      {{#each restaurant in content.restaurants }}
+        <div class="col-md-2 col-sm-3 col-xs-6 restaurant">
+          {{#link-to "group/timer" restaurant.group.id restaurant.id classNames="restaurant-name"}}
+            <img {{ bind-attr src=restaurant.picture }} class="group-logo img-rounded">
+            {{ restaurant.name }}
+          {{/link-to}}
+        </div>
+      {{ else }}
+        <p>You have no restaurants added :(</p>
+        <p>Create one!</p>
+      {{/each}}
+    </div>
   </div>
 </div>
