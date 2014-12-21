@@ -1,11 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2 class="capitalize">{{#if name.length }} {{name}} {{else}} Untitled {{/if}}</h2>
+      <h2 class="capitalize">Order with <strong>{{#if name.length }} {{name}} {{else}} Untitled {{/if}}</strong></h2>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
+      {{#link-to 'group/new-restaurant' id classNames='btn btn-lg btn-default'}}
+        {{ fa-icon "search" }} Search
+      {{/link-to}}
       {{#link-to 'group/new-restaurant' id classNames='btn btn-lg btn-default'}}
         {{ fa-icon "plus" }} Add
       {{/link-to}}
@@ -14,17 +17,24 @@
   <br>
   <div class="row">
     <div class="col-md-12">
-      {{#each restaurant in content.restaurants }}
-        <div class="col-md-2 col-sm-3 col-xs-6 restaurant">
-          {{#link-to "group/timer" restaurant.group.id restaurant.id classNames="restaurant-name"}}
-            {{#if restaurant.picture }} <img {{ bind-attr src=restaurant.picture }} class="restaurant-logo img-rounded"> {{ else }} <img src="/assets/images/default-restaurant-picture.svg" class="restaurant-logo img-rounded"> {{/if}}
-            {{ restaurant.name }}
-          {{/link-to}}
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Frequent</h3>
+          {{#each restaurant in content.restaurants }}
+            <div class="col-md-2 col-sm-3 col-xs-6 restaurant">
+              {{#link-to "group/timer" restaurant.group.id restaurant.id classNames="restaurant-name"}}
+                {{#if restaurant.picture }} <img {{ bind-attr src=restaurant.picture }} class="restaurant-logo img-rounded"> {{ else }} <img src="/assets/images/default-restaurant-picture.svg" class="restaurant-logo img-rounded"> {{/if}}
+                {{ restaurant.name }}
+              {{/link-to}}
+            </div>
+          {{ else }}
+            <p>You have no restaurants in your group.</p>
+            <p>Add one!</p>
+          {{/each}}
         </div>
-      {{ else }}
-        <p>You have no restaurants in your group.</p>
-        <p>Add one!</p>
-      {{/each}}
+      </div>
+      <h3>More</h3>
+      <p>Show all restaurants</p>
     </div>
   </div>
 </div>
