@@ -130,6 +130,13 @@ body.style-index, body.style-login{
 /* BUTTONS */
 .btn {
   border-radius: 4px;
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.btn.active {
+  box-shadow: none;
 }
 
 .btn-primary {
@@ -436,7 +443,7 @@ footer .footer-below {
 
 .seen-in {
   img {
-    height: 128px;
+    height: 100px;
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 30px;
