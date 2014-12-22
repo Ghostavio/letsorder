@@ -1,12 +1,17 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <h2>Select order</h2>
       <ul class="order-list ul-inline-block">
-      {{#each item in content.restaurant.items}}
+      {{#if content.restaurant.items.length }}
+        {{#each item in content.restaurant.items}}
         {{#view 'item-select' item=item}}
           {{ item.name }}
         {{/view}}
-      {{/each}}
+        {{/each}}
+      {{else}}
+        <p class="bg-danger">Menu is empty, please add items</p>
+      {{/if}}
       </ul>
     </div>
   </div>

@@ -1,10 +1,19 @@
+<nav class="navbar navbar-default navbar-timer">
+  <div class="row timer-navbar">
+    <div class="col-md-12">
+      <div class="container">
+        {{#view 'timer-tick'}}
+          <h2>Timer {{ content.timer }}</h2>
+        {{/view}}
+      </div>
+    </div>
+  </div>
+</nav>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <h2>Summary</h2>
-      {{#view 'timer-tick'}}
-        Timer: {{ content.timer }}
-      {{/view}}
+
     </div>
   </div>
   <br>
