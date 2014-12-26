@@ -197,6 +197,7 @@ body.style-index, body.style-login{
   @extend .bg-danger;
   margin-top: -22px;
   padding: 15px;
+  background-color: $white;
 }
 
 .logo {
@@ -345,13 +346,32 @@ ul.order-list {
   padding-left: 0;
 }
 
-.order-name {
+.order-name > span {
   @extend .friend-name;
+  display: inline-block;
 }
 
-.selected-friend {
-  background-color: $green;
+.menu-item {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
+
+button.selected-friend {
+  @extend .btn-success;
+}
+
+.item-quantity {
+  display: none;
+}
+
+button.selected-friend + .item-quantity {
+  float: left;
+  display: inline;
+}
+
+/* .selected-friend {
+  background-color: $green;
+} */
 
 li.no-style {
   list-style-type: none;

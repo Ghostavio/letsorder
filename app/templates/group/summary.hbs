@@ -20,7 +20,7 @@
   {{#each item in content.items}}
     <div class="row">
       <div class="col-md-12">
-        <h3>{{ item.user.name }}</h3>
+        <h3>{{ item.user.name }} <small> Still ordering</small></h3>
         <ul class="order-list">
         {{#each order in item.items}}
           <li class="order-name no-style">{{order.name}}</li>

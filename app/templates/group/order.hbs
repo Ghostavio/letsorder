@@ -2,12 +2,17 @@
   <div class="row">
     <div class="col-md-12">
       <h2>Select order</h2>
-      <ul class="order-list ul-inline-block">
+      <ul class="order-list">
       {{#if content.restaurant.items.length }}
         {{#each item in content.restaurant.items}}
-        {{#view 'item-select' item=item}}
-          {{ item.name }}
-        {{/view}}
+          <li class="no-style menu-item">
+
+          {{#view 'item-select' item=item}}
+            {{ item.name }}
+          {{/view}}
+                    <span class="item-quantity">1&times</span>
+          <button class="btn btn-default btn-md">+</button> <button class="btn btn-default btn-md">{{ fa-icon "comment-o" }}</button>
+          </li>
         {{/each}}
       {{else}}
         <p class="bg-danger">Menu is empty, please add items</p>
@@ -21,7 +26,7 @@
         <div class="form-group">
           {{ input name="name" value=controller.name classNames='form-control' placeholder="What do you want?" }}
         </div>
-        <button class="btn btn-success btn-lg" type="submit">Add</button>
+        <button class="btn btn-default btn-lg" type="submit"> {{ fa-icon 'plus'}} Add</button>
         <button class="btn btn-success btn-lg" {{ action "goToSummary" }} >Next</button>
       </form>
     </div>
