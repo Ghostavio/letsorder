@@ -1,13 +1,17 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-6 col-sm-8 col-xs-10 col-centered-login login-form">
-      <img src="/assets/images/logo.svg" class="login-logo">
-      <h1 class="logo-text">let's order</h1>
+    <div class="col-md-6 col-sm-12 col-xs-12 col-centered-login login-form">
+      <img src="/assets/images/logo.svg" class="logo-icon hidden-xs">
+      <h1 class="logo-text hidden-xs">let's order</h1>
+      <img src="/assets/images/logo.svg" class="logo-icon-sm visible-xs">
+      <h1 class="logo-text-sm visible-xs">let's order</h1>
       <br>
       {{#if session.isAuthenticated}}
-        <button {{ action 'invalidateSession' }} class="btn btn-full btn-xlg btn-danger">Logout</button>
+        <button {{ action 'invalidateSession' }} class="btn btn-full btn-xlg btn-danger hidden-xs">Logout</button>
+        <a {{ action 'invalidateSession' }} class="btn btn-lg btn-danger visible-xs">Logout</a>
       {{else}}
-          <a {{ action 'authenticateWithFacebook' }} class="alert-link btn btn-xlg btn-facebook">{{ fa-icon "facebook-square" }}  Login with Facebook </a>
+          <a {{ action 'authenticateWithFacebook' }} class="btn btn-xlg btn-facebook hidden-xs">{{ fa-icon "facebook-square" }}  Login with Facebook </a>
+          <a {{ action 'authenticateWithFacebook' }} class="btn btn-lg btn-facebook visible-xs">{{ fa-icon "facebook-square" }}  Login with Facebook </a>
       {{/if}}
     </div>
   </div>

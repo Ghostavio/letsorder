@@ -411,9 +411,31 @@ li.no-style {
 }
 
 h1.logo-text {
-  font-size: 2.3em;
   font-weight: 900;
+  font-size: 2.3em;
   letter-spacing: -1px;
+}
+
+h1.logo-text-sm {
+  font-weight: 900;
+  font-size: 1.8em;
+  letter-spacing: -1px;
+}
+
+.logo-icon {
+  float: none;
+  margin: 0 auto;
+  height: 128px;
+}
+
+.logo-icon-sm {
+  float: none;
+  margin: 0 auto;
+  height: 100px;
+}
+
+.sm-heading-landing {
+  font-size: 2.7em!important;
 }
 
 /* FOOTER */
