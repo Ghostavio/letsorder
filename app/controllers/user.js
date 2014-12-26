@@ -101,8 +101,6 @@ export default Ember.Controller.extend({
     var self = this;
     var promise = new Ember.RSVP.Promise(function(resolve, reject) {
       dbRef.authWithOAuthToken("facebook", token, function(error, authData) {
-        //First Time this fires error and user should be null. If connection successful
-        //Second Time will be due to login. In that case we should have user or error
         Ember.run(function() {
           // Handle posible errors.
           if (error && error.code === 'INVALID_USER') {
@@ -113,26 +111,33 @@ export default Ember.Controller.extend({
 
           // Handle user
           if (authData) {
-            // var appUser = self.store.find('user', authData.facebook.id).then(function(appUser) {
-            //   self.set('currentUser', appUser);
-            //   return appUser;
-            // }, function() {
-              self.createNewUser(email, token);
-            // });
-
-            window.ga('set', '&uid', authData.facebook.id); // Set the user ID using signed-in user_id.
+            // since emberfire has a bug when checking if a record exists, we're
+            // using Firebase native lookup and calling a callback to either set
+            // the currentUser or create a new one. link for emberfire bug:
+            // https://github.com/firebase/emberfire/issues/146
+            dbRef.child('users').child(authData.facebook.id).once('value', function(snapshot) {
+               var exists = (snapshot.val() !== null);
+               self.userExistsCallback(authData.facebook.id, exists, token, email);
+            });
             resolve(authData);
           }
         });
       });
-      // authClient.login("facebook", {
-      //   rememberMe: true,
-      //   access_token: token,
-      //   scope: self.get('permissions')
-      // });
     });
 
     return promise;
+  },
+
+  userExistsCallback: function(userId, exists, token, email) {
+    var self = this;
+    if (exists) {
+      self.store.find('user', userId).then(function(appUser) {
+        self.set('currentUser', appUser);
+      });
+    } else {
+      self.createNewUser(email, token);
+    }
+    window.ga('set', '&uid', userId); // Set the user ID using signed-in user_id.
   },
 
   _loginActiveSession: function() {
