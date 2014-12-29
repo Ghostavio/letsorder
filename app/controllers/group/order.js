@@ -4,6 +4,7 @@ export default Ember.Controller.extend({
   name: null,
   needs: ['user', 'group/timer'],
   selectedItems: [],
+  tot: null,
   actions: {
     addItem: function() {
       var self = this,

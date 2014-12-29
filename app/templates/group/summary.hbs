@@ -12,21 +12,49 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2>Summary</h2>
-
+      <h2>Order summary
+      <div class="btn-group pull-right" role="group" aria-label="...">
+        <button type="button" class="btn btn-default active">Name</button>
+        <button type="button" class="btn btn-default">Quantity</button>
+      </div>
+      </h2>
+    {{!--   <h3><img {{ bind-attr src=content.restaurant.picture }} class="restaurant-logo-summary img-rounded"> with <img {{ bind-attr src=content.group.picture }} class="group-logo-summary img-circle"></h3> --}}
     </div>
   </div>
   <br>
+
   {{#each item in content.items}}
     <div class="row">
       <div class="col-md-12">
-        <h3>{{ item.user.name }} <small> Still ordering</small></h3>
+      <h3><img src="/assets/images/default-user-picture.svg" class="user-logo-summary img-circle"> {{ item.user.name }} {{ fa-icon 'check' classNames=''}} <span class="pull-right">AED {{item.items.length}}</span></h3>
         <ul class="order-list">
-        {{#each order in item.items}}
-          <li class="order-name no-style">{{order.name}}</li>
-        {{/each}}
+          {{#each order in item.items}}
+          <li class="no-style menu-item">
+            1&times
+            <strong>{{order.name}}</strong>
+            -
+            extra everything
+            <span class="pull-right">1</span>
+          </li>
+          {{/each}}
         </ul>
       </div>
     </div>
   {{/each}}
+
+  <div class="row">
+    <div class="col-xs-12">
+      <br>
+      <h2>Total <span class="pull-right">AED 10</span></h2>
+      <br>
+      <button class="btn btn-success btn-xlg hidden-xs" {{ action "goToSummary" }}>{{ fa-icon 'phone'}} Call</button>
+      <div class="btn-group btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+          <button class="btn btn-success btn-lg visible-xs" {{ action "goToSummary" }}>{{ fa-icon 'phone'}} Call</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </div>

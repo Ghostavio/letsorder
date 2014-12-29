@@ -278,6 +278,18 @@ a.restaurant-name {
   }
 }
 
+.user-logo-summary {
+  width: 45px;
+}
+
+.group-logo-summary {
+  width: 45px;
+}
+
+.restaurant-logo-summary {
+  width: 45px;
+}
+
 /* DELIVERY */
 .group-order {
   height: 100px;
@@ -365,9 +377,18 @@ button.selected-friend {
 }
 
 button.selected-friend + .item-quantity {
-  float: left;
+/*   float: left; */
   display: inline;
 }
+
+/* .item-price {
+  display: none;
+}
+
+button.selected-friend + .item-price {
+  float: right;
+  display: inline;
+} */
 
 /* .selected-friend {
   background-color: $green;
@@ -392,6 +413,10 @@ li.no-style {
   font-size: 18px;
   height: 43px;
   border-radius: 4px;
+}
+
+.input-lg {
+  height: 45px;
 }
 
 .input-primary-lg {
