@@ -17,7 +17,7 @@
       {{#each restaurant in content.restaurants }}
         <div class="col-md-2 col-sm-3 col-xs-6 restaurant">
           {{#link-to "group/timer" restaurant.group.id restaurant.id classNames="restaurant-name"}}
-            {{#if restaurant.picture }} <img {{ bind-attr src=restaurant.picture }} class="restaurant-logo img-rounded"> {{ else }} <img src="/assets/images/default-restaurant-picture.svg" class="restaurant-logo img-rounded"> {{/if}}
+            {{#if restaurant.picture }} <img {{ bind-attr src=restaurant.picture }} class="restaurant-logo img-rounded"> {{ else }} <img src="./assets/images/default-restaurant-picture.svg" class="restaurant-logo img-rounded"> {{/if}}
             {{ restaurant.name }}
           {{/link-to}}
         </div>

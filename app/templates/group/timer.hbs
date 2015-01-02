@@ -6,7 +6,7 @@
       <div classs="row ">
         <div class="col-xs-4 col-sm-4 col-md-2 group-order">
           {{#link-to '' group classNames='group-name capitalize'}}
-            {{#if content.group.picture }} <img {{ bind-attr src=content.group.picture }} class="img-circle"> {{ else }} <img src="/assets/images/default-group-picture.svg" class="img-circle"> {{/if}}
+            {{#if content.group.picture }} <img {{ bind-attr src=content.group.picture }} class="img-circle"> {{ else }} <img src="./assets/images/default-group-picture.svg" class="img-circle"> {{/if}}
             <p>{{#if content.group.name  }} {{ content.group.name  }} {{ else }} Untitled {{/if}}</p>
           {{/link-to}}
           <button class="btn btn-default btn-md">{{ fa-icon 'plus'}} Add more</button>
@@ -16,7 +16,7 @@
         </div>
         <div class="col-xs-4 col-sm-4 col-md-2 group-order">
           {{#link-to '' group classNames='restaurant-name capitalize'}}
-            {{#if content.picture }} <img {{ bind-attr src=content.picture }} class="img-rounded"> {{ else }} <img src="/assets/images/default-restaurant-picture.svg" class="img-rounded"> {{/if}}
+            {{#if content.picture }} <img {{ bind-attr src=content.picture }} class="img-rounded"> {{ else }} <img src="./assets/images/default-restaurant-picture.svg" class="img-rounded"> {{/if}}
             <p>{{#if content.name  }} {{ content.name  }} {{ else }} Untitled {{/if}}</p>
           {{/link-to}}
           <button class="btn btn-default btn-md">Change</button>
