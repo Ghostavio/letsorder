@@ -78,7 +78,6 @@ http {
       expires off;
 
       try_files $uri $uri/ /index.html =404;
-      <% if ENV["NGINX_DEBUG"] %>add_header X-Ember-Cli-Base-Location on;<% end %>
     }
 
     location ~* /blog/(?<blogpath>(.+)$) {
