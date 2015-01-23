@@ -139,7 +139,7 @@ http {
     }
 
     location ~* /blog/(?<blogpath>(.+)$) {
-      proxy_pass http://<%= ENV["BLOG_DOMAIN"] %>/$blogpath
+      proxy_pass http://<%= ENV["BLOG_DOMAIN"] %>/$blogpath;
     }
   }
 }
