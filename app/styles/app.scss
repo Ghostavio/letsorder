@@ -448,6 +448,17 @@ footer .footer-below {
   padding: 25px 25px;
 }
 
+.footer-section {
+  padding-top: 10px;
+  > a {
+    color: $white;
+    text-decoration: none;
+  }
+  &.contact-letsorder {
+    padding-top: 15px;
+  }
+}
+
 .seen-in {
   img {
     height: 100px;
@@ -469,15 +480,12 @@ address > a {
   }
 }
 
-.fb-like > span {
-  height: 25px!important;
-}
-
 .sharing {
+  font-size: 20px;
   color: $white;
-  margin-right: 5px;
-  margin-left: 5px;
-  &:hover {
+  margin-right: 8px;
+  margin-left: 8px;
+  &:hover, &:focus {
     color: $lightgray;
     text-decoration: none;
   }
