@@ -130,7 +130,7 @@ body.style-index, body.style-login{
 /* BUTTONS */
 .btn {
   border-radius: 3px;
-  &:active {
+  &:active, &:focus {
     box-shadow: none;
   }
 }
@@ -370,6 +370,9 @@ ul.order-list {
 
 button.selected-friend {
   @extend .btn-success;
+  &:hover {
+    border: none;
+  }
 }
 
 .item-quantity {
