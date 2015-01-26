@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form {{ action "setupUser" on="submit" }}>
+        {{ input name="username" value=username classNames='form-control' placeholder="Please pick a username" }}
+        {{ input name="phone" value=phone classNames='form-control' placeholder="Phone number" }}
+        <button class="btn btn-success btn-lg" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

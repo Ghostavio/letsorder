@@ -1,7 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  // redirect: function() {
-  //   this.transitionTo('group');
-  // }
+  redirect: function() {
+    if(this.get('session').isAuthenticated) {
+      this.transitionTo('group');
+    }
+  }
 });

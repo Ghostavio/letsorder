@@ -133,6 +133,9 @@ export default Ember.Controller.extend({
     if (exists) {
       self.store.find('user', userId).then(function(appUser) {
         self.set('currentUser', appUser);
+        if(!appUser.get('username')) {
+          self.transitionToRoute('setup');
+        }
       });
     } else {
       self.createNewUser(email, token);
@@ -151,6 +154,9 @@ export default Ember.Controller.extend({
             var appUser = self.store.find('user', authData.facebook.id).then(function(value) {
               self.set('currentUser', value);
               self.get('controllers.friend').fetchFriends(value);
+              if(!value.get('username')) {
+                self.transitionToRoute('setup');
+              }
               return value;
             });
 

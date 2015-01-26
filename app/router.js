@@ -24,6 +24,8 @@ Router.map(function() {
   this.route('group/timer',          { path: 'group/:group_id/restaurant/:restaurant_id/timer' });
   this.route('group/order',          { path: 'group/:group_id/restaurant/:restaurant_id/order/:order_id' });
   this.route('group/summary',        { path: 'group/:group_id/restaurant/:restaurant_id/order/:order_id/summary' });
+  this.route('setup');
+  this.route('settings');
 });
 
 Router.reopen({
