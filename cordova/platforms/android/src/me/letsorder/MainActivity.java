@@ -19,10 +19,18 @@
 
 package me.letsorder;
 
-import android.os.Bundle;
-import org.apache.cordova.*;
+import me.letsorder.core.Common;
 
-public class CordovaApp extends CordovaActivity
+import org.apache.cordova.CordovaActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+
+import com.parse.Parse;
+import com.parse.ParsePush;
+
+public class MainActivity extends CordovaActivity
 {
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -30,6 +38,16 @@ public class CordovaApp extends CordovaActivity
         super.onCreate(savedInstanceState);
         super.init();
         // Set by <content src="index.html" /> in config.xml
-        loadUrl(launchUrl);
+        String launchAddress = "file:///android_asset/www/index.html";
+        Intent intent = getActivity().getIntent();
+        String path = intent.getStringExtra(Common.ORDER_PATH);
+        
+        if (path != null)
+        	launchAddress = launchAddress + "#" + path;
+        
+        Log.d("shush", launchAddress);
+        loadUrl(launchAddress);
+        
+        ParsePush.subscribeInBackground("order");
     }
 }
