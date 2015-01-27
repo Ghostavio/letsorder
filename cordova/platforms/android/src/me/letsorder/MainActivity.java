@@ -19,7 +19,7 @@
 
 package me.letsorder;
 
-import me.letsorder.core.Common;
+import me.letsorder.core.Config;
 
 import org.apache.cordova.CordovaActivity;
 
@@ -40,7 +40,7 @@ public class MainActivity extends CordovaActivity
         // Set by <content src="index.html" /> in config.xml
         String launchAddress = "file:///android_asset/www/index.html";
         Intent intent = getActivity().getIntent();
-        String path = intent.getStringExtra(Common.ORDER_PATH);
+        String path = intent.getStringExtra(Config.ORDER_PATH);
         
         if (path != null)
         	launchAddress = launchAddress + "#" + path;

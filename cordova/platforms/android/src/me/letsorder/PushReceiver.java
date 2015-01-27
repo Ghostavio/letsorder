@@ -10,7 +10,7 @@ import android.util.Log;
 
 import com.parse.ParsePushBroadcastReceiver;
 
-import me.letsorder.core.Common;
+import me.letsorder.core.Config;
 
 public class PushReceiver extends ParsePushBroadcastReceiver {
 
@@ -22,7 +22,7 @@ public class PushReceiver extends ParsePushBroadcastReceiver {
         JSONObject alert;
 		try {
 			alert = new JSONObject(intent.getStringExtra(KEY_PUSH_DATA));
-			i.putExtra(Common.ORDER_PATH, alert.getString("path"));
+			i.putExtra(Config.ORDER_PATH, alert.getString("path"));
 			Log.d("shush", "added to path: " + alert.getString("path"));
 		} catch (JSONException e) {
 			e.printStackTrace();
