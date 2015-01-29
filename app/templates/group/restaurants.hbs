@@ -6,12 +6,18 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      {{#link-to 'group/new-restaurant' id classNames='btn btn-lg btn-default'}}
-        {{ fa-icon "search" }} Search
-      {{/link-to}}
-      {{#link-to 'group/new-restaurant' id classNames='btn btn-lg btn-default'}}
-        {{ fa-icon "plus" }} Add
-      {{/link-to}}
+      <div class="btn-group pull-right">
+        {{#link-to 'group/new-restaurant' id classNames='btn btn-lg btn-default'}}
+          {{ fa-icon "plus" }} Add
+        {{/link-to}}
+      </div>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1">{{ fa-icon "map-marker" }}</span>
+        <input type="text" class="form-control" placeholder="Current location" aria-describedby="sizing-addon1">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">{{ fa-icon "search" }} Search</button>
+        </span>
+      </div>
     </div>
   </div>
   <br>
