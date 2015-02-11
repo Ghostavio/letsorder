@@ -4,6 +4,11 @@ export default Ember.Controller.extend({
   needs: ['group'],
   errorMsg: null,
   displayErrorMsg: false,
+  fakeInit: function() {
+    if(this.get('model').get('username')) {
+      this.transitionToRoute('group');
+    }
+  },
   actions: {
     setupUser: function() {
       var self = this,
@@ -18,7 +23,7 @@ export default Ember.Controller.extend({
           self.get('controllers.group').set('displaySuccessMsg', true);
           self.get('controllers.group').set('successMsg', 'Your information was saved. Thank you for subscribing.');
           window.setTimeout(function() {
-            window.$(".js-success").fadeTo(500, 0).slideUp(500, function(){
+            window.$(".js-success").fadeTo(500, 0).slideUp(500, function() {
                 self.get('controllers.group').set('displaySuccessMsg', false);
             });
           }, 4500);
