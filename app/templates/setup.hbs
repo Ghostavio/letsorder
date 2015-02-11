@@ -3,8 +3,13 @@
     <div class="col-md-12">
       <h2>Please complete your profile</h2>
       <form {{ action "setupUser" on="submit" }}>
+        {{#if displayErrorMsg}}
+          <div class="alert alert-danger" role="alert">
+            {{ errorMsg }}
+          </div>
+        {{/if}}
         <div class="form-group">
-          {{ input name="username" value=content.username classNames='form-control' placeholder="Please pick a username" }}
+          {{ input name="username" value=content.username classNames='form-control' placeholder="Please pick a username" required="" }}
         </div>
         <div class="form-group">
           {{ input name="phone" value=content.phone classNames='form-control' placeholder="Phone number" }}
