@@ -1,30 +1,46 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2 class="capitalize">{{#if name.length }} {{name}} {{else}} Untitled {{/if}}</h2>
+      <h2 class="capitalize">Eat with <strong>{{#if name.length }} {{name}} {{else}} Untitled {{/if}}</strong></h2>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
-      {{#link-to 'group/new-restaurant' id classNames='btn btn-lg btn-success'}}
-        {{ fa-icon "plus" }} Add
-      {{/link-to}}
+      <div class="btn-group pull-right">
+        {{#link-to 'group/new-restaurant' id classNames='btn btn-lg btn-default'}}
+          {{ fa-icon "plus" }} Add
+        {{/link-to}}
+      </div>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1">{{ fa-icon "map-marker" }}</span>
+        <input type="text" class="form-control" placeholder="Current location" aria-describedby="sizing-addon1">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">{{ fa-icon "search" }} Search</button>
+        </span>
+      </div>
     </div>
   </div>
   <br>
   <div class="row">
     <div class="col-md-12">
-      {{#each restaurant in content.restaurants }}
-        <div class="col-md-2 col-sm-3 col-xs-6 restaurant">
-          {{#link-to "group/timer" restaurant.group.id restaurant.id classNames="restaurant-name"}}
-            {{#if restaurant.picture }} <img {{ bind-attr src=restaurant.picture }} class="restaurant-logo img-rounded"> {{ else }} <img src="/assets/images/default-restaurant-picture.svg" class="restaurant-logo img-rounded"> {{/if}}
-            {{ restaurant.name }}
-          {{/link-to}}
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Frequent/Favourites</h3>
+          {{#each restaurant in content.restaurants }}
+            <div class="col-md-2 col-sm-3 col-xs-6 restaurant">
+              {{#link-to "group/timer" restaurant.group.id restaurant.id classNames="restaurant-name"}}
+                {{#if restaurant.picture }} <img {{ bind-attr src=restaurant.picture }} class="restaurant-logo img-rounded"> {{ else }} <img src="/assets/images/default-restaurant-picture.svg" class="restaurant-logo img-rounded"> {{/if}}
+                {{ restaurant.name }}
+              {{/link-to}}
+            </div>
+          {{ else }}
+            <p>You have no restaurants in your group.</p>
+            <p>Add one!</p>
+          {{/each}}
         </div>
-      {{ else }}
-        <p>You have no restaurants in your group.</p>
-        <p>Add one!</p>
-      {{/each}}
+      </div>
+      <h3>More</h3>
+      <p>Show all restaurants</p>
     </div>
   </div>
 </div>

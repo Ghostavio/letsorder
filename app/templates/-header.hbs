@@ -1,16 +1,16 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
       <div class="row">
         <div class="col-xs-12">
-          <div class="visible-sm visible-xs">
+          <div class="visible-sm visible-xs logo-header">
             {{#link-to 'group' classNames='navbar-brand back-button'}}
-            {{ fa-icon "chevron-left" }}
+            {{ fa-icon "angle-left" }}
             {{/link-to}}
           </div>
           <div class="col-xs-10 hidden-sm hidden-xs">
             {{#link-to 'group' classNames='navbar-brand logo-large'}}
-            <img src="/assets/images/logo_sm.svg" class="logo">
+            <img src="/assets/images/logo-sm.svg" class="logo">
             let's order
             {{/link-to}}
           </div>
@@ -21,12 +21,12 @@
             <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
               <li>
                 {{#link-to '' classNames=''}}
-                Invite
+                  Order history
                 {{/link-to}}
               </li>
               <li>
                 {{#link-to '' classNames=''}}
-                Settings
+                  Settings
                 {{/link-to}}
               </li>
               <li>
@@ -36,7 +36,7 @@
           </div>
           <div class="col-centered-navbar visible-sm visible-xs">
             {{#link-to 'group' classNames='logo-small'}}
-            <img src="/assets/images/logo.svg" class="logo">
+            <img src="/assets/images/logo-sm.svg" class="logo">
             let's order
             {{/link-to}}
           </div>

@@ -1,23 +1,63 @@
+<nav class="navbar navbar-default navbar-timer">
+  <div class="row timer-navbar">
+    <div class="col-md-12">
+      <div class="container">
+        {{#view 'timer-tick'}}
+          <h2>Timer {{ content.timer }}</h2>
+        {{/view}}
+      </div>
+    </div>
+  </div>
+</nav>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2>Summary</h2>
-      {{#view 'timer-tick'}}
-        Timer: {{ content.timer }}
-      {{/view}}
+      <h2>Order summary
+        <div class="btn-group pull-right" role="group" aria-label="...">
+          <button type="button" class="btn btn-default active">Name</button>
+          <button type="button" class="btn btn-default">Quantity</button>
+        </div>
+      </h2>
+      <h2><strong>{{content.restaurant.name}}</strong></h2>
     </div>
   </div>
   <br>
+
   {{#each item in content.items}}
     <div class="row">
       <div class="col-md-12">
-        <h3>{{ item.user.name }}</h3>
+      <h3><img src="/assets/images/default-user-picture.svg" class="user-logo-summary img-circle"> {{ item.user.name }} {{ fa-icon 'check' classNames=''}} <span class="pull-right">AED {{item.items.length}}</span></h3>
         <ul class="order-list">
-        {{#each order in item.items}}
-          <li class="order-name no-style">{{order.name}}</li>
-        {{/each}}
+          {{#each order in item.items}}
+          <li class="no-style menu-item">
+            1&times
+            <strong>{{order.name}}</strong>
+            -
+            extra everything
+            <span class="pull-right">1</span>
+          </li>
+          {{/each}}
         </ul>
       </div>
     </div>
   {{/each}}
+
+  <div class="row">
+    <div class="col-xs-12">
+      <br>
+      <h2>Total <span class="pull-right">AED 10</span></h2>
+      <br>
+      <h3>Delivery to: Dubai Marina, Dubai, UAE</h3>
+      <br>
+      <button class="btn btn-success btn-xlg hidden-xs" {{ action "goToSummary" }}>{{ fa-icon 'phone'}} Call</button>
+      <button class="btn btn-success btn-xlg hidden-xs" {{ action "goToSummary" }}> Place order</button>
+      <div class="btn-group btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+          <button class="btn btn-success btn-lg visible-xs" {{ action "goToSummary" }}>{{ fa-icon 'phone'}} Call</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </div>

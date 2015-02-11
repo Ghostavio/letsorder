@@ -4,6 +4,7 @@ export default Ember.Controller.extend({
   name: null,
   needs: ['user', 'group/timer'],
   selectedItems: [],
+  tot: null,
   actions: {
     addItem: function() {
       var self = this,
@@ -27,7 +28,6 @@ export default Ember.Controller.extend({
           currentUser = this.get('controllers.user').get('currentUser'),
           currentOrder = this.get('model'),
           selectedItems = this.get('selectedItems');
-
       var newItem = this.store.createRecord('order-item', {
         createdAt: new Date(),
         user: currentUser,

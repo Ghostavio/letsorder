@@ -1,17 +1,26 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <h2>Create new group</h2>
       <form {{ action "createGroup" on="submit" }}>
-        {{ input name="name" value=name classNames='form-control' placeholder="Name of the group" }}
+        {{ input name="name" value=name classNames='form-control input-lg' placeholder="Name of the group" }}
         <br>
         <h3>Invite Friends</h3>
-        <ul class="friends-list">
-          {{#each content.friends}}
-            {{#view 'friend-select' friendBinding="this"}}
-              {{ name }}
-            {{/view}}
-          {{/each}}
-        </ul>
+        <div class="row">
+          <div class="col-md-12">
+            {{#each friend in content.friends }}
+            <div class="col-md-2 col-sm-3 col-xs-6 group">
+             {{#view 'friend-select' friendBinding="this"}}
+             <img src="/assets/images/default-user-picture.svg" class="group-logo img-circle">
+             <p>{{ friend.name }}</p>
+             {{/view}}
+            </div>
+            {{ else }}
+             <p>You have no groups :(.</p>
+             <p>Create one!</p>
+             {{/each}}
+          </div>
+        </div>
         <br>
         <button class="btn btn-success btn-lg" type="submit">Create Group</button>
       </form>

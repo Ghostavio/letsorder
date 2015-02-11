@@ -1,24 +1,60 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <ul class="order-list ul-inline-block">
-      {{#each item in content.restaurant.items}}
-        {{#view 'item-select' item=item}}
-          {{ item.name }}
-        {{/view}}
-      {{/each}}
+      <h2>Select order from <strong>{{content.restaurant.name}}</strong> with <strong>{{content.group.name}}</strong></h2>
+      <ul class="order-list">
+      {{#if content.restaurant.items.length }}
+        {{#each item in content.restaurant.items}}
+          {{#if item.name.length }}
+            <li class="no-style menu-item">
+            {{#view 'item-select' item=item}}
+              {{ item.name }}
+            {{/view}}
+            <div class=" item-quantity">
+              <div class="btn-group">
+                <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  1&times <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a>1 </a></li>
+                  <li><a>2 </a></li>
+                  <li><a>3 </a></li>
+                  <li><a>4 </a></li>
+                  <li><a>5 </a></li>
+                </ul>
+              </div>
+              <span class="item-price pull-right">1</span>
+            </div>
+            <button class="btn btn-default btn-lg">{{ fa-icon "comment-o" }}</button>
+            </li>
+          {{/if}}
+        {{/each}}
+      {{else}}
+        <p class="bg-danger">Menu is empty, please add items</p>
+      {{/if}}
       </ul>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
+      <h2>Total <span class="pull-right">AED {{ selectedItems.length }}</span></h2>
+      <h2></h2>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
       <form {{ action "addItem" on="submit" }}>
-        <div class="form-group">
-          {{ input name="name" value=controller.name classNames='form-control' placeholder="What do you want?" }}
+        <div class="input-group">
+          {{ input name="name" value=controller.name classNames='form-control input-lg' placeholder="Not on the menu?" }}
+          <div class="input-group-btn">
+            <button class="btn btn-default btn-lg" type="submit"> {{ fa-icon 'plus'}} Add</button>
+          </div>
         </div>
-        <button class="btn btn-success btn-lg" type="submit">Add</button>
-        <button class="btn btn-success btn-lg" {{ action "goToSummary" }} >Next</button>
       </form>
+      <br>
+      <br>
+      <button class="btn btn-success btn-xlg" {{ action "goToSummary" }}>Confirm order</button>
     </div>
   </div>
 </div>
