@@ -1,1 +1,36 @@
-{{outlet}}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="media">
+		  <div class="media-left">
+		    <a href="#">
+		      
+		    </a>
+		  </div>
+		  <div class="media-body">
+		    <h2>{{ content.name }}</h2>
+		  </div>
+		</div>
+		<br>
+      <form {{ action "setupUser" on="submit" }}>
+        <div class="form-group">
+        	<label>Full name</label>
+          	{{ input name="name" value=content.name classNames='form-control' placeholder="Your name" required="" }}
+        </div>
+        <div class="form-group">
+        	<label>Username</label>
+          	{{ input name="username" value=content.username classNames='form-control' placeholder="User name" required="" }}
+        </div>
+        <div class="form-group">
+        	<label>Phone</label>
+          	{{ input name="phone" value=content.phone classNames='form-control' placeholder="(123) - 555 5555" }}
+        </div>
+        <div class="form-group">
+        	<label>Addresses</label>
+          	{{ input name="phone" value=content.phone classNames='form-control' placeholder="Main road 1" }}
+        </div>
+        <button class="btn btn-success btn-lg" type="submit">Save changes</button>
+      </form>
+    </div>
+  </div>
+</div>
