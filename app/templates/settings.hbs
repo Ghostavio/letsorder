@@ -13,7 +13,12 @@
 		  </div>
 		</div>
 		<br>
-      <form {{ action "setupUser" on="submit" }}>
+      <form>
+ 		{{#if displayErrorMsg}}
+          <div class="alert alert-danger" role="alert">
+            {{ errorMsg }}
+          </div>
+        {{/if}}      
         <div class="form-group">
         	<label>Full name</label>
           	{{ input name="name" value=content.name classNames='form-control' placeholder="Your name" required="" }}
@@ -28,7 +33,32 @@
         </div>
         <div class="form-group">
         	<label>Addresses</label>
-          	{{ input name="phone" value=content.phone classNames='form-control' placeholder="Main road 1" }}
+        	<br>
+	        <ul class="list-group">
+		        {{#each address in content.addresses }}
+		        <li class="list-group-item">
+		        	<span {{ action "removeAddress" address }} class="pull-right" >{{ fa-icon "trash"}}</span>
+		        	{{ address.street }}, {{ address.city }}, {{ address.postcode }}, {{ address.country }}
+		        </li>
+		        {{/each}}	            
+	        </ul>
+			<div class="form-group">
+		 		<div class="form-group">
+		          {{ input name="streetname" value=street classNames='form-control' placeholder="Main street" }}
+		        </div>
+		 		<div class="form-group">
+		          {{ input name="city" value=city classNames='form-control' placeholder="City" }}
+		        </div>
+		 		<div class="form-group">
+		          {{ input name="postcode" value=postcode classNames='form-control' placeholder="111 11" }}
+		        </div>
+				<div class="form-group">
+		          {{ input name="country" value=country classNames='form-control' placeholder="Country" }}
+		        </div>	
+			    <span class="input-group-btn">
+			    	<button class="btn btn-default btn-lg" {{ action "createAddress" on="click" }}>Add address</button>
+			    </span>
+			</div>	          
         </div>
         <button class="btn btn-success btn-lg" type="submit">Save changes</button>
       </form>
