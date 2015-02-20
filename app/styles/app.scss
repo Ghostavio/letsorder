@@ -252,6 +252,17 @@ a.group-name {
   }
 }
 
+.friend > .select-friend {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+
+.friend:hover > .select-friend{
+  display: block;
+}
+
 /* RESTAURANT */
 .restaurant {
   margin-bottom: 50px;

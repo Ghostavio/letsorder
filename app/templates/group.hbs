@@ -2,18 +2,10 @@
 
   <div class="row">
     <div class="col-md-12">
-      <div class="btn-group" data-toggle="buttons">
-        <label class="btn btn-default btn-success btn-lg active">
-        <input type="checkbox" name="" id="" autocomplete="off"> Groups
-        </label>
-        <label class="btn btn-default btn-success btn-lg">
-          <input type="checkbox" name="" id="" autocomplete="off"> Friends
-        </label>
-      </div>
    {{!--    {{#link-to 'group/new' classNames='btn btn-lg btn-default'}}
         {{ fa-icon "plus" }} Create group
       {{/link-to}} --}}
-      {{#link-to 'group/restaurants' classNames='btn btn-lg btn-default pull-right'}}
+      {{#link-to 'group/restaurants' classNames='btn btn-lg btn-default pull-left'}}
         I'm eating alone
       {{/link-to}}
 {{!--       <button class="btn btn-default btn-lg">I'm eating alone</button> --}}
@@ -42,19 +34,17 @@
   <div class="row">
     <div class="col-md-12">
       <h3>Friends</h3>
-      {{#link-to '' classNames='btn btn-lg btn-default'}}
-        {{ fa-icon "plus" }} Add friend
-      {{/link-to}}
       <br>
-      {{#each group in content.friends }}
-      <div class="col-md-2 col-sm-3 col-xs-6 group">
+      {{#each friend in content.friends }}
+      <div class="col-md-2 col-sm-3 col-xs-6 friend">
         {{#link-to 'group/restaurants' group classNames='group-name capitalize'}}
-          {{#if group.picture }} <img {{ bind-attr src=group.picture }} class="group-logo img-circle"> {{ else }} <img src="/assets/images/default-user-picture.svg" class="group-logo img-circle"> {{/if}}
-          {{#if group.name }} {{ group.name }} {{ else }} Untitled {{/if}}
+          {{#if friend.picture }} <img {{ bind-attr src=user.picture }} class="group-logo img-circle"> {{ else }} <img src="/assets/images/default-user-picture.svg" class="group-logo img-circle"> {{/if}}
+          {{#if friend.name }} {{ friend.name }} {{ else }} Untitled {{/if}}
         {{/link-to}}
+        <button class="btn btn-sm select-friend">{{ fa-icon "check" }}</button>
       </div>
       {{ else }}
-        <p>You have no friends dude :(</p>
+        <p>You have no friends :(</p>
       {{/each}}
     </div>
   </div>
