@@ -21,16 +21,16 @@ export default Ember.Controller.extend({
           city: null,
           country: null,
         });
+        self.set('addAddress', !self.get('addAddress'));
       });
     },
     removeAddress: function(address) {
-      console.log('REMOVE THIS ADDRESS', address.id);
-       var  currentUser = this.get('controllers.user').get('currentUser'),
-            addressesUser = currentUser.reload().get('addresses');
-      addressesUser.destroyObject(address);
+      var  currentUser = this.get('controllers.user').get('currentUser');
       address.destroyRecord();
       currentUser.save();
+    },
+    toggleAddAddress: function() {
+      this.set('addAddress', !this.get('addAddress'));
     }
   }
 });
-
