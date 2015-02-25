@@ -8,5 +8,6 @@ export default DS.Model.extend({
   friends   : DS.hasMany("user",      { async: true }),
   favItems  : DS.hasMany("menu-item", { inverse: 'favUsers', async: true }),
   addresses : DS.hasMany("address",   { async: true }),
+  orders    : DS.hasMany("orders",    { async: true }),
   groups    : DS.hasMany("group",     { inverse: 'members', async: true })
 });
