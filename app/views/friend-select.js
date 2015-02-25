@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.View.extend({
-  tagName: 'li',
-  classNames: ['friend-name no-style'],
+  tagName: 'button',
+  classNames: ['btn btn-sm select-friend'],
   click: function() {
     var selectedFriends = this.get('controller').get('selectedFriends'),
         friend = this.get('friend');
