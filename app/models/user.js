@@ -5,6 +5,7 @@ export default DS.Model.extend({
   email     : DS.attr('string'),
   username  : DS.attr('string'),
   phone     : DS.attr('string'),
+  roles     : DS.attr('string'),
   friends   : DS.hasMany("user",      { async: true }),
   favItems  : DS.hasMany("menu-item", { inverse: 'favUsers', async: true }),
   addresses : DS.hasMany("address",   { async: true }),
