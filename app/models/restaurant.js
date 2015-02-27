@@ -7,6 +7,7 @@ export default DS.Model.extend({
   website        : DS.attr('string'),
   menuLink       : DS.attr('string'),
   deliveryCharge : DS.attr('number'),
+  deliveryArea   : DS.attr('string'),
   minimumOrder   : DS.attr('number'),
   items          : DS.hasMany("menu-item", { async: true }),
   group          : DS.belongsTo("group",   { async: true }),
