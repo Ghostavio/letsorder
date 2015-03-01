@@ -4,6 +4,18 @@ import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
 export default Ember.Route.extend(ApplicationRouteMixin, {
   init: function() {
     this._super();
+    try {
+      var appId = "",
+          clientKey = "";
+      parsePlugin.initialize(appId, clientKey, function() {
+        parsePlugin.getInstallationId(function(id) {
+          alert(id);
+        });
+      });
+    }
+    catch(err) {
+      alert('parse library not found');
+    }
     if(this.get('session').isAuthenticated) {
       var self = this,
           token = this.get('session').content.accessToken;

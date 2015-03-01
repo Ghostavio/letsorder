@@ -23,7 +23,18 @@ export default Ember.Controller.extend({
   @return {Promise} Returns a promise that resolves with the logged in User
   */
   login: function(email, token) {
-    // debugger;
+    try {
+      var appId = "",
+          clientKey = "";
+      parsePlugin.initialize(appId, clientKey, function() {
+        parsePlugin.getInstallationId(function(id) {
+          alert(id);
+        });
+      });
+    }
+    catch(err) {
+      console.log('parse library not found');
+    }
     if (email === undefined) {
       return this._loginActiveSession(token);
     } else {
