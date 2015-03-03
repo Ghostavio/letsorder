@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -40,6 +39,16 @@
 		7E7966E61810823500FA85AD /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DC1810823500FA85AD /* icon-small.png */; };
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
+		D206368A9FB54963A3BDDD7D /* CDVParsePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0AB78C597E42578F1EDABF /* CDVParsePlugin.m */; };
+		1599AD760C704E0691B37D62 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99998937F91641AB8907E2C8 /* Parse.framework */; };
+		EBAD4A35F4C7413F8EEE6E83 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F041FBEDD84B6A964363C4 /* AudioToolbox.framework */; };
+		903336316C284441BC984B66 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680089F6214D4A9292A48201 /* CFNetwork.framework */; };
+		5C11DAF3456D43178F02F2DE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D5BCFA0FC0451B97145C79 /* CoreLocation.framework */; };
+		DCC4B3421DB6456993836677 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B596B418BA2482AA7032F32 /* libz.1.1.3.dylib */; };
+		EA72C68716B44D99AB37A709 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8FF9CC45454D8487EE8476 /* QuartzCore.framework */; };
+		1B4B97CF1F6C4385A71F800E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 246418904BF54F1EBED00371 /* Security.framework */; };
+		84C24EAE79C245AD88E34239 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71FE653BC5D4FC8AD0DB806 /* StoreKit.framework */; };
+		F5DB7D7D88EF4DA98634175E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A01BBF039D41DB85F1EBBF /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +114,17 @@
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "LetsOrder/config.xml"; sourceTree = "<group>"; };
+		2A0AB78C597E42578F1EDABF /* CDVParsePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVParsePlugin.m"; path = "org.apache.cordova.core.parseplugin/CDVParsePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		6405463B11BC4867A3D585C0 /* CDVParsePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVParsePlugin.h"; path = "org.apache.cordova.core.parseplugin/CDVParsePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		99998937F91641AB8907E2C8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Parse.framework"; path = "LetsOrder/Plugins/org.apache.cordova.core.parseplugin/Parse.framework"; sourceTree = "<group>"; };
+		88F041FBEDD84B6A964363C4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		680089F6214D4A9292A48201 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CFNetwork.framework"; path = "System/Library/Frameworks/CFNetwork.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		57D5BCFA0FC0451B97145C79 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		4B596B418BA2482AA7032F32 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libz.1.1.3.dylib"; path = "usr/lib/libz.1.1.3.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
+		3F8FF9CC45454D8487EE8476 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		246418904BF54F1EBED00371 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		D71FE653BC5D4FC8AD0DB806 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "StoreKit.framework"; path = "System/Library/Frameworks/StoreKit.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		E6A01BBF039D41DB85F1EBBF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +136,15 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
+				1599AD760C704E0691B37D62 /* Parse.framework in Frameworks */,
+				EBAD4A35F4C7413F8EEE6E83 /* AudioToolbox.framework in Frameworks */,
+				903336316C284441BC984B66 /* CFNetwork.framework in Frameworks */,
+				5C11DAF3456D43178F02F2DE /* CoreLocation.framework in Frameworks */,
+				DCC4B3421DB6456993836677 /* libz.1.1.3.dylib in Frameworks */,
+				EA72C68716B44D99AB37A709 /* QuartzCore.framework in Frameworks */,
+				1B4B97CF1F6C4385A71F800E /* Security.framework in Frameworks */,
+				84C24EAE79C245AD88E34239 /* StoreKit.framework in Frameworks */,
+				F5DB7D7D88EF4DA98634175E /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +217,15 @@
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
+				99998937F91641AB8907E2C8 /* Parse.framework */,
+				88F041FBEDD84B6A964363C4 /* AudioToolbox.framework */,
+				680089F6214D4A9292A48201 /* CFNetwork.framework */,
+				57D5BCFA0FC0451B97145C79 /* CoreLocation.framework */,
+				4B596B418BA2482AA7032F32 /* libz.1.1.3.dylib */,
+				3F8FF9CC45454D8487EE8476 /* QuartzCore.framework */,
+				246418904BF54F1EBED00371 /* Security.framework */,
+				D71FE653BC5D4FC8AD0DB806 /* StoreKit.framework */,
+				E6A01BBF039D41DB85F1EBBF /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,6 +241,8 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				2A0AB78C597E42578F1EDABF /* CDVParsePlugin.m */,
+				6405463B11BC4867A3D585C0 /* CDVParsePlugin.h */,
 			);
 			name = Plugins;
 			path = "LetsOrder/Plugins";
@@ -284,7 +324,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 510;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "__CLI__" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -387,6 +427,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				D206368A9FB54963A3BDDD7D /* CDVParsePlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +470,10 @@
 				);
 				PRODUCT_NAME = "LetsOrder";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"LetsOrder/Plugins/org.apache.cordova.core.parseplugin\"",
+				);
 			};
 			name = Debug;
 		};
@@ -458,6 +503,10 @@
 				);
 				PRODUCT_NAME = "LetsOrder";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"LetsOrder/Plugins/org.apache.cordova.core.parseplugin\"",
+				);
 			};
 			name = Release;
 		};

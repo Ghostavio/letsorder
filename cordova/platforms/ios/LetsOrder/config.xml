@@ -29,4 +29,7 @@
     <content src="index.html" />
     <access origin="*" />
     <preference name="DisallowOverscroll" value="true" />
+    <feature name="ParsePlugin">
+        <param name="ios-package" value="CDVParsePlugin" />
+    </feature>
 </widget>

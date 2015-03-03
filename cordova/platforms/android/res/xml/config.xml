@@ -11,4 +11,7 @@
     <content src="index.html" />
     <access origin="*" />
     <preference name="DisallowOverscroll" value="true" />
+    <feature name="ParsePlugin">
+        <param name="android-package" value="org.apache.cordova.core.ParsePlugin" />
+    </feature>
 </widget>
