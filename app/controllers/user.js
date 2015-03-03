@@ -23,7 +23,6 @@ export default Ember.Controller.extend({
   @return {Promise} Returns a promise that resolves with the logged in User
   */
   login: function(email, token) {
-    // debugger;
     if (email === undefined) {
       return this._loginActiveSession(token);
     } else {
